@@ -1,0 +1,37 @@
+#!/bin/bash
+#Sample module for bashIRC
+owner="Halon"
+if [ "$(type)" = "PRIVMSG" ]; then
+   cmd=$(text | awk '{print $1}')
+   if [ "$cmd" = "@shorten" ]; then
+      shorten=$(echo "$text" | awk '{print $2}')
+      shortened=$(curl -s "http://is.gd/api.php?longurl=$shorten")
+      msg $(dest) Shortened URL: $shortened
+   fi
+   if [ "$cmd" = "@shell" ]; then
+      if [ "$(hostcheck *ttwj*@o.o)" = "1" ]; then
+         text=$(text)
+         echo "$(eval ${text#* } )" > /tmp/stuff
+         while read lol; do
+            msg $(dest chan) $lol
+         done < /tmp/stuff
+      else
+         notice $nick_ Who on earth do you think you are?
+            
+         fi
+      fi
+      if [ "$cmd" = "@lmg" ]; then
+         if [ "$(text | awk '{print $2}')" ]; then
+            search=$(text); search=${text#* * }
+            msg $(dest) $(curl "http://is.gd/api.php?longurl=http://lmgtfy.com/?q=$(text | awk '{print $2}')")
+         fi
+      fi
+   fi
+   if [ "$(type)" = "INVITE" ]; then
+      chan=$(echo ${@} | awk '{print $4}')
+      chan=$(echo "$chan" | sed -e 's/://g')
+      if [ -z "$(cat ~/ircbot/chanlist | grep "$chan")" ]; then
+         echo "$chan" >> ~/ircbot/chanlist
+      fi
+      echo "JOIN $chan" >> shellbot.input
+   fi

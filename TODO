@@ -1,0 +1,8 @@
+v0.3 
+ - Add SSL support
+ - Add multiserver support
+ - Add multifantasy support
+ - Add user login support (v0.3.1)
+ - Add chan ops/voice/hops detection
+ - Fix up code to allow running from any directory.
+ - User suggestions…?

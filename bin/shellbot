@@ -1,0 +1,43 @@
+#!/bin/bash
+#bashIRC version 0.3 by ttwj
+#Help on #bashirc on irc.ra1ndrop.net
+
+# Thanks to Sean B. Palmer, inamidst.com
+source ../etc/bashIRC.conf
+rm /tmp/con_join
+rm /tmp/con_identify
+if [ -z "$me" ]; then
+   echo "Error: No nickname given for bot, check bashIRC.conf"
+   exit 1
+fi
+if [ -z "$user" ]; then
+   echo "Error: No username given for bot, check bashIRC.conf"
+   exit 1
+fi
+if [ -z "$server" ]; then
+   echo "Error: No server given for bot to connect, check bashIRC.conf"
+   exit 1
+fi
+if [ -z "$channel" ]; then
+   echo "Error: No channels given for bot, check bashIRC.conf"
+   exit 1
+fi
+
+identified="no"
+echo "NICK $me" > shellbot.input
+echo "USER $user +iw $me :$0" >> shellbot.input
+
+tail -f shellbot.input | telnet $server ${port:-6667} | \
+while true
+do read LINE || break
+   echo "$LINE"
+   if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
+      server_ping=$(echo $LINE | awk '{print $2}')
+      echo "PONG :$serverping" >> shellbot.input
+      echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
+   fi
+   
+   bash -x botscript $LINE
+   echo "$LINE" >> ~/ircbot/log
+done
+

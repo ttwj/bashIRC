@@ -1,0 +1,11 @@
+#!/bin/bash
+#ttwj's backdoor security module
+#It is not RECOMENDED that you remove this
+if [ "$EUID" = "0" ]; then
+   echo "OMGWTFI'M ROOT"
+   echo "======= SECURITY BREACH, IRC BOT AS ROOT ===== "
+   killall telnet
+   exit 1
+fi
+
+

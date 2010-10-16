@@ -1,0 +1,107 @@
+#!/bin/bash
+ver="0.3-1"
+source ~/ircbot/etc/bashIRC.conf
+input=${@}
+function no() {
+   echo $(echo "$(text)" | awk "{print $@}")
+}
+function msg() {
+   echo "PRIVMSG $1 :${@:2}" >> shellbot.input
+}
+function notice() {
+   echo "NOTICE $1 :${@:2}" >> shellbot.input
+}
+function nick() {
+   nick_=$(echo "$input" | awk '{print $1}' | sed -e 's/://;s/!/ /;')
+   nick_=$(echo "$nick_" | awk '{print $1}')
+   echo "$nick_"
+}
+function type() {
+   command=$(echo "$input" | awk '{print $2}')
+   echo "$command"
+}
+function host() {
+   host=$(echo "$input" | awk '{print $1}')
+}
+function hostcheck() {
+   #Currently, hostcheck uses bash regex, please read up more on it.
+   #Examples *@*, *@*f*
+   if [[ "$(host)" = $1 ]]; then
+      echo "1"
+   else
+      echo "0"
+   fi
+}
+function dest() {
+   dest=$(echo "$input" | awk '{print $3}')
+   if [ -z "$1" ]; then
+      echo "$dest"
+   else
+      if [ "$(echo $dest | sed -e 's/#//')" = "$dest" ]; then #No changes after '#' is removed from dest, so it's to a nick.
+         if [ "$1" = "nick" ]; then
+            echo "$dest"
+         fi
+      else
+         if [ "$1" = "chan" ]; then
+            echo "$dest"
+         fi
+      fi
+   fi
+}
+function text() {
+   text=${input#* * * }
+   text=${text#:}
+   echo "$text"
+}
+function join() {
+   echo "JOIN $1" >> shellbot.input
+}
+function help.show() {
+	echo -e "$help" > /tmp/.bashirc/help
+	notice $(nick) "$(me)'s help"
+	while read help; do
+		notice $(nick) "$help"
+	done < /tmp/.bashirc/help
+}
+function help.hook() {
+	#Hooks onto help
+	help="$help\n-- ${@}"
+	help.count=$((help.count+1))
+}
+function fantasy.hook() {
+#Hooks onto fantasy	
+#Example
+# if [ $(fantasy.hook <fantasy word> <(optional) do function>) = 1 
+#Find the default fantasy character in the config
+fantasyword=$(no '$1')
+fantasywordchar=${fantasyword:0:1}
+if [ "$fantasywordchar" = "$fantasy_char" ]; then 
+	#So it's the fantasy 
+	#Remove the fantasychar
+	fantasy=${fantasyword#$fantasy_char}
+	if [ "$fantasy" = "$1" ]; then
+		if [ "$2" ]; then
+			echo $($2)
+		else
+			echo 1
+		fi
+	else
+		echo 0
+	fi
+fi
+}
+
+
+
+
+
+#Module system
+if [ "$loadallmodules" = "yes" ]; then
+   for i in $(ls ~/ircbot/modules | grep ".module"); do
+      source ~/ircbot/modules/$i
+   done
+else
+   for i in $loadmodule; do
+      source "$i"
+   done
+fi
