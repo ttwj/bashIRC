@@ -1,0 +1,34 @@
+#!/bin/bash
+#Core Module for bashIRC, to identify/etc.
+
+#IRC tracking stuff.
+#Track nick changes on $(me)
+if [ "$(type)" = "NICK" ] && [ "$(nick)" = "$(me)" ]; then
+	#Get new nick
+	bashirc_me=$(text)
+fi
+function me() {
+	echo "$bashirc_me"
+}
+if [ "$(type)" = "376" ]; then #376 is End of MOTD command
+   if [ "$nspass" ]; then
+      if [ ! -e  "/tmp/con_identify" ]; then
+         msg nickserv identify $nspass
+         echo "o.o" > /tmp/con_identify
+      fi
+   fi
+   if [ ! -e "/tmp/con_join" ]; then
+      for i in $channel; do
+         join "$i"
+      done
+      echo "o.o" > /tmp/con_join
+   fi
+fi
+#CTCP Stuff below
+if [ "$(type)" = "PRIVMSG" ] && [ "$(dest)" = "$(me)" ]; then
+      if [ "$(no '$1')" = $'\001VERSION\001' ]; then
+         notice $(nick) VERSION ttwj bashIRC library $ver
+      elif [ "$cmd" = $'\001TIME\001' ]; then
+         notice $(nick) TIME $(date)
+      fi
+fi

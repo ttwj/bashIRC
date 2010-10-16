@@ -90,10 +90,10 @@ if [ "$fantasywordchar" = "$fantasy_char" ]; then
 	fi
 fi
 }
-
-
-
-
+#Load all libraries
+for i in $(ls ../lib/ | grep ".lib"); do
+	source ../lib/$i
+done
 
 #Module system
 if [ "$loadallmodules" = "yes" ]; then
