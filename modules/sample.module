@@ -1,20 +1,8 @@
 #!/bin/bash
 #Sample module for bashIRC 0.3-1
 owner="Halon"
-hook=$(help.hook "$(fantasy.char)lmg <stuff> -- Googles stuff for you :)")
-#Hook onto help for lmg
-if [ "$hook" = "0" ]; then
-   echo "Alert! Help cannot be hooked for function lmg!"
-   #Any msg will do or just ignore it :3
-   exit 1
-fi
-hook=$(help.hook "$(fantasy.char)shorten <url> -- Shortens URL for you :)")
-#Hook onto help for URL
-if [ "$hook" = "0" ]; then
-   echo "Alert! Help cannot be hooked for function shorten!"
-   #Any msg will do or just ignore it :3
-   exit 1
-fi
+$(help.hook "$(fantasy.char)lmg <stuff> -- Googles stuff for you :)") > /dev/null
+$(help.hook "$(fantasy.char)shorten <url> -- Shortens URL for you :)") > /dev/null
 
 function shorten() {
    #Using fantasy omits the original fantasy word
@@ -27,14 +15,10 @@ function lmg() {
    fi
 }
 #Hook onto fantasy.
-if [ "$(fantasy.hook lmg lmg)" = "0" ]; then
-   echo "Alert! Cannot hook for fantasy cmd lmg"
-   exit 1
-fi
-if [ "$(fantasy.hook shorten shorten)" = "0" ]; then
-   echo "Alert! Cannot hook for fantasy cmd lmg"
-   exit 1
-fi
+$(fantasy.hook lmg lmg) > /dev/null
+$(fantasy.hook shorten shorten) > /dev/null
+
+
 if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
    cmd=$(text | awk '{print $1}')
    #Shell has been preserved to use the old format for devs who want a reference.
@@ -46,11 +30,11 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
             msg $(dest chan) $lol
          done < /tmp/stuff
       else
-         notice $nick_ Who on earth do you think you are?
+         notice $(nick) Who on earth do you think you are?
             
-         fi
-      fi
-   fi
+	  fi
+	fi
+fi
    #Autojoin on invite.
    if [ "$(type)" = "INVITE" ]; then
       #Alternative, check if nick who invited was owner or w/e

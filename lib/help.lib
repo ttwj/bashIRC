@@ -1,0 +1,13 @@
+#!/bin/bash
+function help.show() {
+	notice $(nick) "$me""'s help"
+	while read help; do
+		notice $(nick) "$help"
+	done < /tmp/.bashirc/help
+	notice $(nick) $help_count help showed.
+}
+function help.hook() {
+	#Hooks onto help
+	echo "${@}" >> /tmp/.bashirc/help
+	help_count=$((help_count+1))
+}

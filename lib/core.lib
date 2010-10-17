@@ -1,0 +1,58 @@
+#!/bin/bash
+function no() {
+   echo $(echo "$(text)" | awk "{print $@}")
+}
+function msg() {
+   echo "PRIVMSG $1 :${@:2}" >> shellbot.input
+}
+function notice() {
+   echo "NOTICE $1 :${@:2}" >> shellbot.input
+}
+function nick() {
+   nick_=$(echo "$input" | awk '{print $1}' | sed -e 's/://;s/!/ /;')
+   nick_=$(echo "$nick_" | awk '{print $1}')
+   echo "$nick_"
+}
+function type() {
+   command=$(echo "$input" | awk '{print $2}')
+   echo "$command"
+}
+function host() {
+   host=$(echo "$input" | awk '{print $1}')
+}
+function hostcheck() {
+   #Currently, hostcheck uses bash regex, please read up more on it.
+   #Examples *@*, *@*f*
+   if [[ "$(host)" = $1 ]]; then
+      echo "1"
+   else
+      echo "0"
+   fi
+}
+function dest() {
+   dest=$(echo "$input" | awk '{print $3}')
+   if [ -z "$1" ]; then
+      echo "$dest"
+   else
+      if [ "$(echo $dest | sed -e 's/#//')" = "$dest" ]; then #No changes after '#' is removed from dest, so it's to a nick.
+         if [ "$1" = "nick" ]; then
+            echo "$dest"
+         fi
+      else
+         if [ "$1" = "chan" ]; then
+            echo "$dest"
+         fi
+      fi
+   fi
+}
+function text() {
+   text=${input#* * * }
+   text=${text#:}
+   echo "$text"
+}
+function join() {
+   echo "JOIN $1" >> shellbot.input
+}
+function me() {
+	echo $me
+}

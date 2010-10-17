@@ -1,11 +1,22 @@
 #!/bin/bash
 #bashIRC version 0.3 by ttwj
 #Help on #bashirc on irc.ra1ndrop.net
+echo "
+    __               __    ________  ______
+   / /_  ____ ______/ /_  /  _/ __ \/ ____/
+  / __ \/ __ `/ ___/ __ \ / // /_/ / /     
+ / /_/ / /_/ (__  ) / / // // _, _/ /___   
+/_.___/\__,_/____/_/ /_/___/_/ |_|\____/   
+                                           
+v0.3-1
 
+Join us @ #bashirc on irc.ra1ndrop.net
+"
 # Thanks to Sean B. Palmer, inamidst.com
+# This bot has been improved and tidied to SMACK SAKERA'S FACE
 source ../etc/bashIRC.conf
-rm /tmp/con_join
-rm /tmp/con_identify
+rm /tmp/.bashirc/con_join
+rm /tmp/.bashirc/con_identify
 if [ -z "$me" ]; then
    echo "Error: No nickname given for bot, check bashIRC.conf"
    exit 1
@@ -36,8 +47,10 @@ do read LINE || break
       echo "PONG :$serverping" >> shellbot.input
       echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
    fi
-   
-   bash -x botscript $LINE
-   echo "$LINE" >> ~/ircbot/log
+   if [ "$1" = "-d" ]; then
+	bash -x botscript $LINE
+	else
+	bash botscript $LINE
+	fi
 done
 

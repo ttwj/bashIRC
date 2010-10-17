@@ -1,17 +1,111 @@
-NICK sample|bot12297
-USER bot +iw sample|bot12297 :./bashirc
+NICK sample|bot18553
+USER bot +iw sample|bot18553 :./bashirc
 JOIN #bashirc
 JOIN #lolchan
-JOIN #twatter
 PONG :
-PRIVMSG #bashirc :http://is.gd/g59lF
-PRIVMSG #bashirc :http://is.gd/g59lF
-PRIVMSG #bashirc :http://is.gd/g59mV
+PRIVMSG #bashirc :http://is.gd/g5jip
+PRIVMSG #bashirc :http://is.gd/g5jip
+NOTICE ttwj :'s help
+NOTICE ttwj :help showed.
+NOTICE ttwj :'s help
+NOTICE ttwj :help showed.
+NOTICE ttwj :'s help
+NOTICE ttwj :help showed.
+NOTICE Kaikz :Added word FolderEnhancer to the database
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
+NOTICE Kaikz :Added word wtf to the database
+NOTICE ttwj :Who on earth do you think you are?
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
+PONG :
+PONG :
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
+NOTICE ttwj :Added word ACTION to the database
+NOTICE ttwj :Added word fail to the database
+PONG :
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
 PONG :
 PONG :
 PONG :
-JOIN #twatter
-PRIVMSG #twatter :http://is.gd/g59Fa
+PONG :
+PONG :
+PONG :
+PONG :
+NOTICE xKaikz :Added word lolz to the database
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+NOTICE Sakera :Added word This to the database
+PONG :
+PONG :
+PONG :
+PONG :
+NOTICE Fike :Who on earth do you think you are?
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+NOTICE lolz :Added word ttwj to the database
+NOTICE lolz :Error: This info has already been added
+PONG :
+NOTICE ttwj :Added word Sakera to the database
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
+NOTICE ttwj :'s help
+NOTICE ttwj :
+NOTICE ttwj :help showed.
+NOTICE ttwj :'s help
+NOTICE ttwj :@lmg <stuff> -- Googles stuff for you :)
+NOTICE ttwj :@shorten <url> -- Shortens URL for you :)
+NOTICE ttwj :help showed.
+NOTICE ttwj :sample|bot22789's help
+NOTICE ttwj :@lmg <stuff> -- Googles stuff for you :)
+NOTICE ttwj :@shorten <url> -- Shortens URL for you :)
+NOTICE ttwj :help showed.
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+PONG :
+NOTICE ttwj :TIME Sun Oct 17 18:55:15 SGT 2010
+NOTICE ttwj :VERSION ttwj bashIRC library 0.3-1
+PONG :
 PONG :
 PONG :
 PONG :
