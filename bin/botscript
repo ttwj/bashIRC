@@ -1,6 +1,6 @@
 #!/bin/bash
 ver="0.3-1"
-source ~/ircbot/etc/bashIRC.conf
+source ~/bashIRC/etc/bashIRC.conf
 input=${@}
 function no() {
    echo $(echo "$(text)" | awk "{print $@}")
@@ -81,7 +81,7 @@ if [ "$fantasywordchar" = "$fantasy_char" ]; then
 	fantasy=${fantasyword#$fantasy_char}
 	if [ "$fantasy" = "$1" ]; then
 		if [ "$2" ]; then
-			echo $($2)
+			echo $($2 ${@:2})
 		else
 			echo 1
 		fi
@@ -90,15 +90,17 @@ if [ "$fantasywordchar" = "$fantasy_char" ]; then
 	fi
 fi
 }
+fantasy.char() {
+	echo $fantasy_char
+}
 #Load all libraries
 for i in $(ls ../lib/ | grep ".lib"); do
 	source ../lib/$i
 done
-
 #Module system
 if [ "$loadallmodules" = "yes" ]; then
-   for i in $(ls ~/ircbot/modules | grep ".module"); do
-      source ~/ircbot/modules/$i
+   for i in $(ls ~/bashIRC/modules | grep ".module"); do
+      source ~/bashIRC/modules/$i
    done
 else
    for i in $loadmodule; do

@@ -48,14 +48,16 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
       else
          notice $nick_ Who on earth do you think you are?
             
-         fi
       fi
    fi
-   #Autojoin on invite.
-   if [ "$(type)" = "INVITE" ]; then
-      #Alternative, check if nick who invited was owner or w/e
-             
-         chan=$(echo ${@} | awk '{print $4}')
-         chan=$(echo "$chan" | sed -e 's/://g')
-         echo "JOIN $chan" >> shellbot.input
+fi
+#Autojoin on invite.
+if [ "$(type)" = "INVITE" ]; then
+   #Alternative, check if nick who invited was owner or w/e
+   if [ "$(hostcheck *ttwj@o.o)" = "1" ]; then
+      
+      chan=$(echo ${@} | awk '{print $4}')
+      chan=$(echo "$chan" | sed -e 's/://g')
+      echo "JOIN $chan" >> shellbot.input
    fi
+fi

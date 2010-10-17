@@ -1,1 +1,18 @@
+NICK sample|bot12297
+USER bot +iw sample|bot12297 :./bashirc
+JOIN #bashirc
+JOIN #lolchan
+JOIN #twatter
+PONG :
+PRIVMSG #bashirc :http://is.gd/g59lF
+PRIVMSG #bashirc :http://is.gd/g59lF
+PRIVMSG #bashirc :http://is.gd/g59mV
+PONG :
+PONG :
+PONG :
+JOIN #twatter
+PRIVMSG #twatter :http://is.gd/g59Fa
+PONG :
+PONG :
+PONG :
 PONG :

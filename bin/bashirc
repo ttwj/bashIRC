@@ -25,7 +25,7 @@ fi
 
 identified="no"
 echo "NICK $me" > shellbot.input
-echo "USER $user +iw $me :$0" >> shellbot.input
+echo "USER $user +iw$bot $me :$0" >> shellbot.input
 
 tail -f shellbot.input | telnet $server ${port:-6667} | \
 while true
