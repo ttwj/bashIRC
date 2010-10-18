@@ -1,0 +1,10 @@
+#!/bin/bash
+#User tracking library for bashirc
+if [ "$(type)" = "353" ]; then
+	users=${@:5}
+	for i in $users; do
+		status=${i:0:1}
+		#Gotta finish this
+	done
+	
+fi
