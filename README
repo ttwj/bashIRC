@@ -1,6 +1,12 @@
 bashIRC Readme
-Version 0.3-1
+Version 0.3-2
 
 Extract and run this in ~/ircbot
 
 Help on #bashirc on irc.ra1ndrop.net
+
+== To 0.3-1 or below users ==
+ - shellbot.input has been replaced with $raw_input
+ - Using shellbot.input WILL NOT WORK
+ - Please update all scripts
+
