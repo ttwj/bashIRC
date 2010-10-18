@@ -23,24 +23,45 @@ if [ -z "$channel" ]; then
    echo "Error: No channels given for bot, check bashIRC.conf"
    exit 1
 fi
-
+no=0
+for i in $server; do
+   no=$((no+1))
+done
+if [ "$no" > "1" ]; then
+   echo "I see that you have more than one server specified in the config"
+   echo "Please choose which one would you like to connect to."
+   fail[0]="o.o"
+   no=1
+   for i in $server; do
+      fail+=("$i")
+      echo "$no -- $i"
+      no=$((no+1))
+   done
+   read -p "Number: __ " no
+   if [ ! ${fail[$no]} ]; then
+      echo "Error, no such server exists"
+      exit
+   fi
+   server=${fail[$no]}
+   slap=$(echo -n "${fail[$no]}" | sed -e 's/\.//g')
+   slap="$slap".input
+fi
 identified="no"
-echo "NICK $me" > shellbot.input
-echo "USER $user +iw$bot $me :$0" >> shellbot.input
-
-tail -f shellbot.input | telnet $server ${port:-6667} | \
+echo "NICK $me" > $slap
+echo "USER $user +iw$bot $me :$0" >> $slap
+tail -f "$slap" | telnet $server ${port:-6667} | \
 while true
 do read LINE || break
    echo "$LINE"
    if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
       server_ping=$(echo $LINE | awk '{print $2}')
-      echo "PONG :$serverping" >> shellbot.input
+      echo "PONG :$serverping" >> $slap
       echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
    fi
    if [ "$1" = "-d" ]; then
-	bash -x botscript $LINE
-	else
-	bash botscript $LINE
-	fi
+      bash -x botscript "$slap $LINE"
+   else
+      bash botscript "$slap $LINE"
+   fi
 done
 

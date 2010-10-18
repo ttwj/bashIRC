@@ -5,6 +5,7 @@ if [ "$(type)" = "353" ]; then
 	for i in $users; do
 		status=${i:0:1}
 		#Gotta finish this
+		
 	done
 	
 fi

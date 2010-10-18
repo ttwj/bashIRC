@@ -15,8 +15,8 @@ function lmg() {
    fi
 }
 #Hook onto fantasy.
-hook=$(fantasy.hook "lmg lmg" > /dev/null)
-hook=$(fantasy.hook "shorten shorten" > /dev/null)
+hook=$(fantasy.hook lmg lmg > /dev/null)
+hook=$(fantasy.hook shorten shorten > /dev/null)
 
 
 if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
@@ -39,7 +39,7 @@ fi
    if [ "$(type)" = "INVITE" ]; then
       #Alternative, check if nick who invited was owner or w/e
              
-         chan=$(echo ${@} | awk '{print $4}')
+         chan=$(echo "$input" | awk '{print $4}')
          chan=$(echo "$chan" | sed -e 's/://g')
-         echo "JOIN $chan" >> shellbot.input
+         echo "JOIN $chan" >> $raw_input
    fi

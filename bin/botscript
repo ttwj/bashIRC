@@ -1,7 +1,9 @@
 #!/bin/bash
-ver="0.3-1"
+ver="0.3-2"
 source ../etc/bashIRC.conf
 input=${@}
+input=${input#* }
+raw_input=$(echo "${@}" | awk '{print $1}')
 rm /tmp/.bashirc/help
 if [ ! -e "/tmp/.bashirc" ]; then
 	mkdir /tmp/.bashirc
@@ -23,4 +25,4 @@ else
 fi
 
 #Our help command :)
-$(fantasy.hook help help.show) > /dev/null
+hook=$(fantasy.hook help help.show > /dev/null )

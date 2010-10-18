@@ -3,10 +3,10 @@ function no() {
    echo $(echo "$(text)" | awk "{print $@}")
 }
 function msg() {
-   echo "PRIVMSG $1 :${@:2}" >> shellbot.input
+   echo "PRIVMSG $1 :${@:2}" >> $raw_input
 }
 function notice() {
-   echo "NOTICE $1 :${@:2}" >> shellbot.input
+   echo "NOTICE $1 :${@:2}" >> $raw_input
 }
 function nick() {
    nick_=$(echo "$input" | awk '{print $1}' | sed -e 's/://;s/!/ /;')
@@ -51,7 +51,7 @@ function text() {
    echo "$text"
 }
 function join() {
-   echo "JOIN $1" >> shellbot.input
+   echo "JOIN $1" >> $raw_input
 }
 function me() {
 	echo $me
