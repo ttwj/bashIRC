@@ -15,8 +15,8 @@ function lmg() {
    fi
 }
 #Hook onto fantasy.
-$(fantasy.hook lmg lmg) > /dev/null
-$(fantasy.hook shorten shorten) > /dev/null
+hook=$(fantasy.hook "lmg lmg" > /dev/null)
+hook=$(fantasy.hook "shorten shorten" > /dev/null)
 
 
 if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
