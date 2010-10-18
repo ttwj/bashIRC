@@ -5,7 +5,7 @@ Extract and run this in ~/ircbot
 
 Help on #bashirc on irc.ra1ndrop.net
 
-== To 0.3-1 or below users ==
+== To 0.3-1 or below users who are upgrading ==
  - shellbot.input has been replaced with $raw_input
  - Using shellbot.input WILL NOT WORK
  - Please update all scripts
