@@ -1,0 +1,19 @@
+#!/bin/bash
+#Core connection to IRC
+slap=$1
+tail -f "$slap" | telnet $2 ${3:-6667} | \
+while true
+do read LINE || break
+   echo "$LINE"
+   if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
+      server_ping=$(echo $LINE | awk '{print $2}')
+      echo "PONG :$serverping" >> $slap
+      echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
+   fi
+   if [ "$debug" = "1" ]; then
+      bash -x botscript "$slap $LINE"
+   else
+      bash botscript "$slap $LINE"
+   fi
+done
+

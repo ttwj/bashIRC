@@ -2,6 +2,10 @@
 #bashIRC version 0.3 by ttwj
 #Help on #bashirc on irc.ra1ndrop.net
 cat motd
+#Set chmod
+chmod 775 bashirc
+chmod 775 botscript
+chmod 776 .core
 # Thanks to Sean B. Palmer, inamidst.com
 # This bot has been improved and tidied to SMACK SAKERA'S FACE
 source ../etc/bashIRC.conf
@@ -46,22 +50,21 @@ if [ "$no" > "1" ]; then
    slap=$(echo -n "${fail[$no]}" | sed -e 's/\.//g')
    slap="$slap".input
 fi
+for i in ${@}; do
+	if [ "$i" = "-d" ]; then
+		export bashirc_debug="1"
+	elif [ "$i" = "-nohup" ]; then
+		nohup="1"
+	fi
+done
 identified="no"
 echo "NICK $me" > $slap
 echo "USER $user +iw$bot $me :$0" >> $slap
-tail -f "$slap" | telnet $server ${port:-6667} | \
-while true
-do read LINE || break
-   echo "$LINE"
-   if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
-      server_ping=$(echo $LINE | awk '{print $2}')
-      echo "PONG :$serverping" >> $slap
-      echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
-   fi
-   if [ "$1" = "-d" ]; then
-      bash -x botscript "$slap $LINE"
-   else
-      bash botscript "$slap $LINE"
-   fi
-done
-
+if [ "$nohup" = "1" ]; then
+	nohup ./.core "$slap" "$server" "$port"&disown
+	echo "Bot runned sucessfully"
+	exit 1
+else
+	./.core "$slap" "$server" "$port"
+fi
+	

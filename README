@@ -1,7 +1,8 @@
 bashIRC Readme
 Version 0.3-2
 
-Extract and run this in ~/ircbot
+Run ./bashirc in ~/bashIRC/bin
+* It only works in that directory :/
 
 Help on #bashirc on irc.ra1ndrop.net
 
@@ -9,4 +10,6 @@ Help on #bashirc on irc.ra1ndrop.net
  - shellbot.input has been replaced with $raw_input
  - Using shellbot.input WILL NOT WORK
  - Please update all scripts
+
+* Use -d as args for debug and -nohup if you'd like it to run in the background
 

@@ -1,0 +1,79 @@
+Trying 94.228.216.184...
+Connected to irc.ra1ndrop.net.
+Escape character is '^]'.
+:nl.ra1ndrop.net NOTICE * :*** Looking up your hostname...
+:nl.ra1ndrop.net NOTICE * :*** Checking Ident
+:nl.ra1ndrop.net NOTICE * :*** Found your hostname
+:nl.ra1ndrop.net NOTICE * :*** No Ident response
+:nl.ra1ndrop.net 001 sample|bot :Welcome to the ra1ndrop Internet Relay Chat Network sample|bot
+:nl.ra1ndrop.net 002 sample|bot :Your host is nl.ra1ndrop.net[nl.ra1ndrop.net/6667], running version shadowircd-6.2.0
+:nl.ra1ndrop.net 003 sample|bot :This server was created Mon Sep 20 2010 at 08:46:41 MSD
+:nl.ra1ndrop.net 004 sample|bot nl.ra1ndrop.net shadowircd-6.2.0 BCDGQRSVZagilopswxz ACDEFGIJKLMNOPQRSTabcefghijklmnopqrstvz bkloveqjfI
+:nl.ra1ndrop.net 005 sample|bot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIbq,k,flj,ACDEFGJKMNPQTcgimnpstz CHANLIMIT=&#:30 PREFIX=(aohv)!@%+ MAXLIST=bqeI:100 MODES=4 NETWORK=ra1ndrop KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+:nl.ra1ndrop.net 005 sample|bot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=31 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 :are supported by this server
+:nl.ra1ndrop.net 005 sample|bot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,acjorsxz WHOX CLIENTVER=3.0 :are supported by this server
+Connection closed by foreign host.
+Trying 94.228.216.184...
+Connected to irc.ra1ndrop.net.
+Escape character is '^]'.
+:nl.ra1ndrop.net NOTICE * :*** Looking up your hostname...
+:nl.ra1ndrop.net NOTICE * :*** Checking Ident
+:nl.ra1ndrop.net NOTICE * :*** Found your hostname
+:nl.ra1ndrop.net NOTICE * :*** No Ident response
+:nl.ra1ndrop.net 001 sample|bot :Welcome to the ra1ndrop Internet Relay Chat Network sample|bot
+:nl.ra1ndrop.net 002 sample|bot :Your host is nl.ra1ndrop.net[nl.ra1ndrop.net/6667], running version shadowircd-6.2.0
+:nl.ra1ndrop.net 003 sample|bot :This server was created Mon Sep 20 2010 at 08:46:41 MSD
+:nl.ra1ndrop.net 004 sample|bot nl.ra1ndrop.net shadowircd-6.2.0 BCDGQRSVZagilopswxz ACDEFGIJKLMNOPQRSTabcefghijklmnopqrstvz bkloveqjfI
+:nl.ra1ndrop.net 005 sample|bot CHANTYPES=&# EXCEPTS INVEX CHANMODES=eIbq,k,flj,ACDEFGJKMNPQTcgimnpstz CHANLIMIT=&#:30 PREFIX=(aohv)!@%+ MAXLIST=bqeI:100 MODES=4 NETWORK=ra1ndrop KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+:nl.ra1ndrop.net 005 sample|bot SAFELIST ELIST=U CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=31 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 :are supported by this server
+:nl.ra1ndrop.net 005 sample|bot FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,acjorsxz WHOX CLIENTVER=3.0 :are supported by this server
+:nl.ra1ndrop.net 251 sample|bot :There are 4 users and 136 invisible on 9 servers
+:nl.ra1ndrop.net 252 sample|bot 5 :IRC Operators online
+:nl.ra1ndrop.net 254 sample|bot 45 :channels formed
+:nl.ra1ndrop.net 255 sample|bot :I have 26 clients and 4 servers
+:nl.ra1ndrop.net 265 sample|bot 26 45 :Current local users 26, max 45
+:nl.ra1ndrop.net 266 sample|bot 140 155 :Current global users 140, max 155
+:nl.ra1ndrop.net 250 sample|bot :Highest connection count: 49 (45 clients) (1410 connections received)
+:nl.ra1ndrop.net 375 sample|bot :- nl.ra1ndrop.net Message of the Day -
+:nl.ra1ndrop.net 372 sample|bot :- Welcome to
+:nl.ra1ndrop.net 372 sample|bot :-              ___         __
+:nl.ra1ndrop.net 372 sample|bot :-   ____ ___ _<  /___  ___/ /____ ___   ___
+:nl.ra1ndrop.net 372 sample|bot :-  / __// _ `// // _ / _  // __// _  / _ :nl.ra1ndrop.net 372 sample|bot :- /_/   _,_//_//_//_/_,_//_/   ___// .__/
+:nl.ra1ndrop.net 372 sample|bot :-                                    /_/
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :-                                 IRC Network
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :- == Your host today is nl.ra1ndrop.net ,located in Alphen a/d Rijn, Netherlands,
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :- -- Network Rules --
+:nl.ra1ndrop.net 372 sample|bot :- 1. No advertising
+:nl.ra1ndrop.net 372 sample|bot :- 2. No spamming
+:nl.ra1ndrop.net 372 sample|bot :- 3. No ban evading
+:nl.ra1ndrop.net 372 sample|bot :- 4. We will not tolerate the distribution of child pornography
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :- ==================== OPEN PROXY SCAN ===========================================
+:nl.ra1ndrop.net 372 sample|bot :-  Pursuant to United States Code (U.S.C.), Title 18, Part 1, Section 2701 Part(c)
+:nl.ra1ndrop.net 372 sample|bot :- the right to scan your system to ensure that your connection does not provide a
+:nl.ra1ndrop.net 372 sample|bot :- security risk to us, our servers, or our users.
+:nl.ra1ndrop.net 372 sample|bot :- All users connecting on un-secure proxy hosts shall be banned from the network.
+:nl.ra1ndrop.net 372 sample|bot :- ================================================================================
+:nl.ra1ndrop.net 372 sample|bot :- - Visit us in #help for IRC related help
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 372 sample|bot :- <3 shadowircd.
+:nl.ra1ndrop.net 372 sample|bot :-
+:nl.ra1ndrop.net 376 sample|bot :End of /MOTD command.
+:sample|bot MODE sample|bot :+ix
+:nl.ra1ndrop.net 396 sample|bot da030.delta50.maxonline.com.sg :is now your hidden host
+:Global!services@localhost.net NOTICE sample|bot :[Logon News - Oct 12 2010] Attention users, we've upgraded to Anope IRC Services, all channel and nick databases are gone, please re-register them!
+:Global!services@localhost.net NOTICE sample|bot :[Random News - Oct 13 2010] Want Statserv in your channel? Contact any IRCop in #help for more info.
+:Global!services@localhost.net NOTICE sample|bot :Random Quote: "Learning without thought is labor lost; thought without learning is perilous." (Confucious)
+:sample|bot!~bot@da030.delta50.maxonline.com.sg JOIN :#bashirc
+:nl.ra1ndrop.net 332 sample|bot #bashirc :bashIRC v0.3-1 beta is released! :: git clone git://github.com/ttwj/bashIRC.git || apptrackr link fetcher http://pastie.org/1187858 || Multiserver support in 0.3 complete! || If you're using 0.3-2 (Multiserver), Please replace shellbot.input with $raw_input
+:nl.ra1ndrop.net 333 sample|bot #bashirc nou!n@o.u 1287381979
+:nl.ra1ndrop.net 353 sample|bot = #bashirc :sample|bot Z Kaikz lolz @nou @Rizon @Splintr_Rizon @jwtt @UndeadRevolutio StatServ mbilker !ttwj rcg janus !UndeadRevolution
+:nl.ra1ndrop.net 366 sample|bot #bashirc :End of /NAMES list.
+:nl.ra1ndrop.net 477 sample|bot #lolchan :Cannot join channel (+r) - you need to be identified with services
