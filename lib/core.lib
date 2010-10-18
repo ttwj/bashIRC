@@ -3,10 +3,10 @@ function no() {
    echo $(echo "$(text)" | awk "{print $@}")
 }
 function msg() {
-   echo "PRIVMSG $1 :${@:2}" >> $raw_input
+   $(bot.out "PRIVMSG $1 :${@:2}")
 }
 function notice() {
-   echo "NOTICE $1 :${@:2}" >> $raw_input
+   $(bot.out "NOTICE $1 :${@:2}")
 }
 function nick() {
    nick_=$(echo "$input" | awk '{print $1}' | sed -e 's/://;s/!/ /;')
@@ -51,8 +51,16 @@ function text() {
    echo "$text"
 }
 function join() {
-   echo "JOIN $1" >> $raw_input
+   $(bot.out "JOIN $1")
 }
 function me() {
-	echo $me
+   echo $me
+}
+function bot.out() {
+   #echoing "" > output is no longer recomended due to a known exploit that can get irritating :|
+   #Check if bot has been exploited
+   remexploit=$(echo "${@}" | sed -e 's/:\(.*\)!\(.*\) PRIVMSG \(.*\) ://')
+   if [ "$remexploit" = "${@}" ]; then
+      echo "${@}" >> $raw_input
+	fi
 }

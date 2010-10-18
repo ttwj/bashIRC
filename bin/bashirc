@@ -1,16 +1,27 @@
 #!/bin/bash
-#bashIRC version 0.3 by ttwj
+#bashIRC version 0.3-3 by ttwj
 #Help on #bashirc on irc.ra1ndrop.net
+# Thanks to Sean B. Palmer, inamidst.com
+# This bot has been improved and tidied to SMACK SAKERA'S FACE
 cat motd
 #Set chmod
 chmod 775 bashirc
 chmod 775 botscript
-chmod 776 .core
-# Thanks to Sean B. Palmer, inamidst.com
-# This bot has been improved and tidied to SMACK SAKERA'S FACE
+chmod 775 .core
+chmod 775 .timer
+if [ ! -e /tmp/.bashirc ]; then
+   mkdir /tmp/.bashirc
+fi
 source ../etc/bashIRC.conf
-rm /tmp/.bashirc/con_join
-rm /tmp/.bashirc/con_identify
+if [ -e /tmp/.bashirc/con_join ]; then
+   rm /tmp/.bashirc/con_join
+fi
+if [ -e /tmp/.bashirc/con_identify ]; then
+   rm /tmp/.bashirc/con_identify
+fi
+
+#Real code comes here o:
+
 if [ -z "$me" ]; then
    echo "Error: No nickname given for bot, check bashIRC.conf"
    exit 1
@@ -51,20 +62,21 @@ if [ "$no" > "1" ]; then
    slap="$slap".input
 fi
 for i in ${@}; do
-	if [ "$i" = "-d" ]; then
-		export bashirc_debug="1"
-	elif [ "$i" = "-nohup" ]; then
-		nohup="1"
-	fi
+   if [ "$i" = "-d" ]; then
+      export bashirc_debug="1"
+      elif [ "$i" = "-nohup" ]; then
+      nohup="1"
+   fi
 done
 identified="no"
 echo "NICK $me" > $slap
 echo "USER $user +iw$bot $me :$0" >> $slap
+echo "Hit enter after you see the next line to run bot."
+nohup ./timer "$slap"&disown
 if [ "$nohup" = "1" ]; then
-	nohup ./.core "$slap" "$server" "$port"&disown
-	echo "Bot runned sucessfully"
-	exit 1
+   nohup ./core "$slap" "$server" "$port"&disown
+   echo "Bot runned sucessfully"
+   exit 1
 else
-	./.core "$slap" "$server" "$port"
+   bash core "$slap" "$server" "$port"
 fi
-	

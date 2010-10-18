@@ -1,26 +1,27 @@
 #!/bin/bash
 function fantasy.hook() {
-#Hooks onto fantasy	
-#Example
-# if [ $(fantasy.hook <fantasy word> <(optional) do function>) = 1 
-#Find the default fantasy character in the config
-fantasyword=$(no '$1')
-fantasywordchar=${fantasyword:0:1}
-if [ "$fantasywordchar" = "$fantasy_char" ]; then 
-	#So it's the fantasy 
-	#Remove the fantasychar
-	fantasy=${fantasyword#$fantasy_char}
-	if [ "$fantasy" = "$1" ]; then
-		if [ "$2" ]; then
-			echo $($2 ${@:2})
-		else
-			echo 1
-		fi
-	else
-		echo 0
-	fi
-fi
+   #Hooks onto fantasy
+   #Example
+   # if [ $(fantasy.hook <fantasy word> <(optional) do function>) = 1
+   #Find the default fantasy character in the config
+   fantasyword=$(no '$1')
+   fantasywordchar=${fantasyword:0:1}
+   if [ "$fantasywordchar" = "$fantasy_char" ]; then
+      #So it's the fantasy
+      #Remove the fantasychar
+      fantasy=${fantasyword#$fantasy_char}
+      if [ "$fantasy" = "$1" ]; then
+         if [ "$2" ]; then
+			oright=$(text)
+            echo $($2 "${oright#* }")
+         else
+            echo 1
+         fi
+      else
+         echo 0
+      fi
+   fi
 }
 fantasy.char() {
-	echo $fantasy_char
+   echo $fantasy_char
 }

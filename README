@@ -1,15 +1,18 @@
 bashIRC Readme
-Version 0.3-2
+Version 0.3-3
 
 Run ./bashirc in ~/bashIRC/bin
 * It only works in that directory :/
 
 Help on #bashirc on irc.ra1ndrop.net
 
-== To 0.3-1 or below users who are upgrading ==
- - shellbot.input has been replaced with $raw_input
+== To 0.3-2 or below users who are upgrading ==
+ - shellbot.input/ has been replaced with $(bot.in "<stuff here>")
+ - Alternatively, you may use echo "stuff" >> $raw_input, however you may be vulnerable to the known exploit
  - Using shellbot.input WILL NOT WORK
  - Please update all scripts
 
+= Known bugs
+ 
 * Use -d as args for debug and -nohup if you'd like it to run in the background
 

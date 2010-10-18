@@ -1,20 +1,20 @@
 #!/bin/bash
-ver="0.3-2"
+ver="0.3-3"
 source ../etc/bashIRC.conf
 input=${@}
 input=${input#* }
 raw_input=$(echo "${@}" | awk '{print $1}')
 rm /tmp/.bashirc/help
 if [ ! -e "/tmp/.bashirc" ]; then
-	mkdir /tmp/.bashirc
+   mkdir /tmp/.bashirc
 fi
 
 #Load all libraries
 for i in $(ls ../lib/ | grep ".lib"); do
-	source ../lib/$i
+   source ../lib/$i
 done
 #Module system
-if [ "$loadallmodules" = "yes" ]; then	
+if [ "$loadallmodules" = "yes" ]; then
    for i in $(ls ../modules | grep ".module"); do
       source ../modules/$i
    done

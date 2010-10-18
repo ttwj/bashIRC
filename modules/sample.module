@@ -1,17 +1,17 @@
 #!/bin/bash
 #Sample module for bashIRC 0.3-1
 owner="Halon"
-$(help.hook "$(fantasy.char)lmg <stuff> -- Googles stuff for you :)") > /dev/null
+$(help.hook "$(fantasy.char)lmg <stuff> -- Googles stuff for you") > /dev/null
 $(help.hook "$(fantasy.char)shorten <url> -- Shortens URL for you :)") > /dev/null
 
 function shorten() {
    #Using fantasy omits the original fantasy word
    shortened=$(curl -s "http://is.gd/api.php?longurl=$1")
-   msg $(dest) Shortened URL: $shortened
+   msg $(dest) "Shortened URL: $shortened"
 }
 function lmg() {
    if [ "${@}" ]; then
-      msg $(dest) $(curl "http://is.gd/api.php?longurl=http://lmgtfy.com/?q=$(text | awk '{print $2}')")
+      msg $(dest) $(curl "http://is.gd/api.php?longurl=http://lmgtfy.com/?q=${@}")
    fi
 }
 #Hook onto fantasy.
@@ -27,10 +27,10 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
          text=$(text)
          echo "$(eval ${text#* } )" > /tmp/stuff
          while read lol; do
-            msg $(dest chan) $lol
+            msg $(dest chan) "$lol"
          done < /tmp/stuff
       else
-         notice $(nick) Who on earth do you think you are?
+         notice $(nick) "Who on earth do you think you are?"
             
 	  fi
 	fi
@@ -41,5 +41,5 @@ fi
              
          chan=$(echo "$input" | awk '{print $4}')
          chan=$(echo "$chan" | sed -e 's/://g')
-         echo "JOIN $chan" >> $raw_input
+         $(bot.out "JOIN $chan")
    fi

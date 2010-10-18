@@ -1,4 +1,5 @@
 #!/bin/bash
+#mm this module is broken and no longer maintained, anyone wanna fix it?
 function no() {
    echo $(echo "$(text)" | awk "{print $@}")
 }
@@ -8,10 +9,10 @@ if [ "$(no '$2')" = "is" ]; then
 		word=$(no '$1')
 		info=${text#* * }
 		if [ "$(cat info | grep "$word ")" ]; then
-			notice $(nick) Error: This info has already been added
+			notice $(nick) "Error: This info has already been added"
 		else
 			echo "word:$word $info" >> info
-			notice $(nick) Added word $word to the database
+			notice $(nick) "Added word $word to the database"
 		fi
 	fi
 	elif [ "$(no '$1')" = "what" ]; then
@@ -20,7 +21,7 @@ if [ "$(no '$2')" = "is" ]; then
 			if [ "$line" ]; then
 			notice $(nick) $(no '$3') is ${line#* }
 			else 
-			notice $(nick) Sorry, no such definition for this word exists.
+			notice $(nick) "Sorry, no such definition for this word exists."
 			fi
 		fi
 	fi

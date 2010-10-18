@@ -1,0 +1,10 @@
+#!/bin/bash
+rand=$RANDOM
+#Jizz module, by Kaikz
+# Modified by ttwj for 0.3 fantasy support and made it shorter. ;)
+$(help.hook "$(fantasy.char)jizz <someone> -- Jizz that person with some random load o:") > /dev/null
+function jizz() {
+	msg $(dest) "$(nick) pumps ${rand:0:2}% of their load into $1's ass." #srsly Kaikz, why didn't you do this?
+}
+
+hook=$(fantasy.hook jizz jizz > /dev/null)

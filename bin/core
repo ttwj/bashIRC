@@ -1,16 +1,32 @@
 #!/bin/bash
 #Core connection to IRC
 slap=$1
+start=$(date +%s)
+echo "$start" > .time
 tail -f "$slap" | telnet $2 ${3:-6667} | \
 while true
 do read LINE || break
    echo "$LINE"
+   #Ping controls 
    if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
       server_ping=$(echo $LINE | awk '{print $2}')
       echo "PONG :$serverping" >> $slap
+	  end=$(date +%s)
+	  #echo new time diff
+	  echo "$((end-start))" >> .time."$slap"
+	  start=$(date +%s)
+	  #Get total time
+	  while read time; do
+		ttime=$((ttime+time))
+	  done < .time."$slap"
+	  #Get average time
+	  nos=$(wc -l ".time.$slap" | awk '{print $1}')
+	  avgtime=$((ttime/nos))
+	  echo "$agvtime" > .avgtime."$slap"
+	  echo "$end" > .endtime."$slap"
       echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
    fi
-   if [ "$debug" = "1" ]; then
+   if [ "$bashirc_debug" = "1" ]; then
       bash -x botscript "$slap $LINE"
    else
       bash botscript "$slap $LINE"

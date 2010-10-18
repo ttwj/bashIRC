@@ -77,3 +77,427 @@ Escape character is '^]'.
 :nl.ra1ndrop.net 353 sample|bot = #bashirc :sample|bot Z Kaikz lolz @nou @Rizon @Splintr_Rizon @jwtt @UndeadRevolutio StatServ mbilker !ttwj rcg janus !UndeadRevolution
 :nl.ra1ndrop.net 366 sample|bot #bashirc :End of /NAMES list.
 :nl.ra1ndrop.net 477 sample|bot #lolchan :Cannot join channel (+r) - you need to be identified with services
+nohup: ./.timer: No such file or directory
+nohup: ./.timer: No such file or directory
+nohup: ./.timer: No such file or directory
+Trying 78.129.226.145...
+Connected to eu.iso.rizon.net.
+Escape character is '^]'.
+:irc.shakeababy.net 439 * :Please wait while we process your connection.
+:irc.shakeababy.net NOTICE AUTH :*** Looking up your hostname...
+:irc.shakeababy.net NOTICE AUTH :*** Checking Ident
+:irc.shakeababy.net NOTICE AUTH :*** Found your hostname
+:irc.shakeababy.net NOTICE AUTH :*** No Ident response
+:irc.shakeababy.net NOTICE sample|bot :*** Your host is masked (Rizon-B9AADD09.delta58.maxonline.com.sg)
+:irc.shakeababy.net 001 sample|bot :Welcome to the Rizon Internet Relay Chat Network sample|bot
+:irc.shakeababy.net 002 sample|bot :Your host is irc.shakeababy.net[78.129.226.145/6667], running version hybrid-7.2.3+plexus-3.0.1(20100109_0-524)
+:irc.shakeababy.net 003 sample|bot :This server was created Jan 21 2010 at 18:44:38
+:irc.shakeababy.net 004 sample|bot irc.shakeababy.net hybrid-7.2.3+plexus-3.0.1(20100109_0-524) CDGNRSWXabcdfgijklnopqrsuwxyz BIMNORSabcehiklmnopqstvz Iabehkloqv
+:irc.shakeababy.net 005 sample|bot CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 TOPICLEN=390 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ NETWORK=Rizon MAXLIST=beI:100 TARGMAX=ACCEPT:,KICK:1,LIST:1,NAMES:1,NOTICE:4,PRIVMSG:4,WHOIS:1 CHANTYPES=# :are supported by this server
+:irc.shakeababy.net 005 sample|bot CHANLIMIT=#:200 CHANNELLEN=50 CHANMODES=eIb,k,l,BMNORScimnpstz AWAYLEN=160 FNC NAMESX UHNAMES KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+:irc.shakeababy.net 042 sample|bot 64CAAD1VV :your unique ID
+:irc.shakeababy.net 251 sample|bot :There are 48 users and 16678 invisible on 17 servers
+:irc.shakeababy.net 252 sample|bot 73 :IRC Operators online
+:irc.shakeababy.net 253 sample|bot 226 :unknown connection(s)
+:irc.shakeababy.net 254 sample|bot 17351 :channels formed
+:irc.shakeababy.net 255 sample|bot :I have 16726 clients and 0 servers
+:irc.shakeababy.net 265 sample|bot 16726 19715 :Current local users 16726, max 19715
+:irc.shakeababy.net 266 sample|bot 16726 19715 :Current global users 16726, max 19715
+:irc.shakeababy.net 375 sample|bot :- irc.shakeababy.net Message of the Day -
+:irc.shakeababy.net 372 sample|bot :-    Welcome to irc.shakeababy.net
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-         Now its time for conversational spanish with grimlock
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    Las ardillas. Me persiguen. Quieren mis tuercas pero no pueden
+:irc.shakeababy.net 372 sample|bot :- tenerlas.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    no habla? the squirrels. they chase me. they want my nuts but they
+:irc.shakeababy.net 372 sample|bot :-    can not have them.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    El gato en mi pantalones, quiere mi burrito. Pero el no puede
+:irc.shakeababy.net 372 sample|bot :-    tenerlo. No compartire con el
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    Still no habla? the cat in my pants, he wants my burrito. But he can
+:irc.shakeababy.net 372 sample|bot :-    not have it. I will not share with him.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-         This has been conversational spanish with grimlock, time for
+:irc.shakeababy.net 372 sample|bot :-         something more serious.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    --Welcome to irc.shakeababy.net part of Rizon--
+:irc.shakeababy.net 372 sample|bot :-    Listening on ports: 6660 - 6669, 7000 SSL: 6697, 8080 and 9999
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    -- Server Rules
+:irc.shakeababy.net 372 sample|bot :-    - No Flooding
+:irc.shakeababy.net 372 sample|bot :-    - No Bots (auto-detected)
+:irc.shakeababy.net 372 sample|bot :-    - No Clones
+:irc.shakeababy.net 372 sample|bot :-    - No Spamming
+:irc.shakeababy.net 372 sample|bot :-    - No Takeovers
+:irc.shakeababy.net 372 sample|bot :-    - Clients must respond to VERSION requests!
+:irc.shakeababy.net 372 sample|bot :-    - We will not tolerate the distribution of child pornography.
+:irc.shakeababy.net 372 sample|bot :-    - Access granted to this server is a privilege.
+:irc.shakeababy.net 372 sample|bot :-    - Staff members may disconnect clients for any or no reason.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-   --Visit us in #help for assistance with anything irc related--
+:irc.shakeababy.net 372 sample|bot :-   --Visit us in #services for assistance from an IRC Operator--
+:irc.shakeababy.net 372 sample|bot :-   --Visit us in #shakeababy to help support this client server--
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 376 sample|bot :End of /MOTD command.
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg MODE sample|bot :+ix
+:Global!service@rizon.net NOTICE sample|bot :[Logon News - Mar 22 2010] 9Questions? Need help? Just bored? Check Out Rizon Forums which have several help documents and many other things like our random facts. Signon and tell us about yourself and your channel http://www.rizon.net/vbulletin/index.php Enjoy.
+:Global!service@rizon.net NOTICE sample|bot :[Logon News - May 08 2010] 4First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+:Global!service@rizon.net NOTICE sample|bot :[Random News - Mar 20 2009] For the latest Rizon News like our upcoming Game Services Check out http://www.rizon.net/vbulletin/forumdisplay.php?f=2 -Rizon Staff.
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :Pursuant to United States Code (USC), Title 18, Part 1, Section 2701 Part (c),
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :Rizon will do a passive scan of your IP address to check for open proxies.
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :If you do not consent to this scan, disconnect now. These scans are harmless and
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :will originate from proxyscan.rizon.net (208.100.20.98). For more information see #help.
+:py-ctcp!python@ctcp-scanner.rizon.net PRIVMSG sample|bot :VERSION
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg JOIN :#bashirc
+:irc.shakeababy.net MODE #bashirc +nt
+:irc.shakeababy.net 353 sample|bot = #bashirc :@sample|bot
+:irc.shakeababy.net 366 sample|bot #bashirc :End of /NAMES list.
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg JOIN :#lolchan
+:irc.shakeababy.net MODE #lolchan +nt
+:irc.shakeababy.net 353 sample|bot = #lolchan :@sample|bot
+:irc.shakeababy.net 366 sample|bot #lolchan :End of /NAMES list.
+:jwtt!ttwj@titty.wedge INVITE sample|bot :#chatulous
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg JOIN :#chatulous
+:irc.shakeababy.net 332 sample|bot #chatulous :Official Hackulous and Apptrackr IRC Channel! :: Apptrackr currently has 22282 apps! :: Latest Public Installous: 3.3.5
+:irc.shakeababy.net 333 sample|bot #chatulous Apptrackr!~Apptrackr@Rizon-8BCBA725.net 1287410507
+:irc.shakeababy.net 353 sample|bot = #chatulous :sample|bot Raziel- Hackubot %andydam |night| ven000m staticsafe myMoD SnuAFK raidgh0st kinvig [-T-] sykotik div Stevey-Lapp Ally666 zBot Queo Smarag Olivier54 pondeuce Chappo dace marm187 YukaKing @Jeremy magik OliverSonne Spooky_Lurker MavereX Ramsey[LC] Surenix italodance trialsoft Stats &WYSE ThePirate dank_nugs madLyfe rool gueriLLaPunK cock Balke- %Gravity %Supaazn skram_ local-` pmarcos Tweek AwesomezGuy pcmike @Apptrackr xFinch713x Gymcon GadgetMan
+:irc.shakeababy.net 353 sample|bot = #chatulous :TrixIsOwned Caleo2 +iH8sn0w bigmcq77 Looler UndeadRevolution MMiller Condor Piggy maqr granduke +rcg wofh Smike Mac102250 @poedgirl i3744111 wof Rest_In_Peace maruko|AWAY MKJ samm DJPsycho|AFK h8 risc411 blunden FuryFire WyKeD wang WaiXan &Rizon x[x] oM ChanStat-01 reubencaron dizzy c Dark_Link Splintr mouwen Kaikz afk|afk_afk`afk +ChingPow zhongfu Nighthawk441 mbilker Z0ck3rOO7 jwtt joelixny TYLFC
+:irc.shakeababy.net 366 sample|bot #chatulous :End of /NAMES list.
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :lol make me a princess
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :lol
+:Hackubot!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Was i called ?
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :http://bit.ly/bvsCh2
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :thats sick
+nohup: ./.timer: No such file or directory
+nohup: ./.timer: No such file or directory
+Trying 78.129.226.145...
+Connected to eu.iso.rizon.net.
+Escape character is '^]'.
+:irc.shakeababy.net 439 * :Please wait while we process your connection.
+:irc.shakeababy.net NOTICE AUTH :*** Looking up your hostname...
+:irc.shakeababy.net NOTICE AUTH :*** Checking Ident
+:irc.shakeababy.net NOTICE AUTH :*** Found your hostname
+:irc.shakeababy.net NOTICE AUTH :*** No Ident response
+:irc.shakeababy.net NOTICE sample|bot :*** Your host is masked (Rizon-B9AADD09.delta58.maxonline.com.sg)
+:irc.shakeababy.net 001 sample|bot :Welcome to the Rizon Internet Relay Chat Network sample|bot
+:irc.shakeababy.net 002 sample|bot :Your host is irc.shakeababy.net[78.129.226.145/6667], running version hybrid-7.2.3+plexus-3.0.1(20100109_0-524)
+:irc.shakeababy.net 003 sample|bot :This server was created Jan 21 2010 at 18:44:38
+:irc.shakeababy.net 004 sample|bot irc.shakeababy.net hybrid-7.2.3+plexus-3.0.1(20100109_0-524) CDGNRSWXabcdfgijklnopqrsuwxyz BIMNORSabcehiklmnopqstvz Iabehkloqv
+:irc.shakeababy.net 005 sample|bot CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 TOPICLEN=390 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ NETWORK=Rizon MAXLIST=beI:100 TARGMAX=ACCEPT:,KICK:1,LIST:1,NAMES:1,NOTICE:4,PRIVMSG:4,WHOIS:1 CHANTYPES=# :are supported by this server
+:irc.shakeababy.net 005 sample|bot CHANLIMIT=#:200 CHANNELLEN=50 CHANMODES=eIb,k,l,BMNORScimnpstz AWAYLEN=160 FNC NAMESX UHNAMES KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+:irc.shakeababy.net 042 sample|bot 64CAAD1XJ :your unique ID
+:irc.shakeababy.net 251 sample|bot :There are 48 users and 16740 invisible on 17 servers
+:irc.shakeababy.net 252 sample|bot 74 :IRC Operators online
+:irc.shakeababy.net 253 sample|bot 223 :unknown connection(s)
+:irc.shakeababy.net 254 sample|bot 17353 :channels formed
+:irc.shakeababy.net 255 sample|bot :I have 16788 clients and 0 servers
+:irc.shakeababy.net 265 sample|bot 16788 19715 :Current local users 16788, max 19715
+:irc.shakeababy.net 266 sample|bot 16788 19715 :Current global users 16788, max 19715
+:irc.shakeababy.net 375 sample|bot :- irc.shakeababy.net Message of the Day -
+:irc.shakeababy.net 372 sample|bot :-    Welcome to irc.shakeababy.net
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-         Now its time for conversational spanish with grimlock
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    Las ardillas. Me persiguen. Quieren mis tuercas pero no pueden
+:irc.shakeababy.net 372 sample|bot :- tenerlas.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    no habla? the squirrels. they chase me. they want my nuts but they
+:irc.shakeababy.net 372 sample|bot :-    can not have them.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    El gato en mi pantalones, quiere mi burrito. Pero el no puede
+:irc.shakeababy.net 372 sample|bot :-    tenerlo. No compartire con el
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    Still no habla? the cat in my pants, he wants my burrito. But he can
+:irc.shakeababy.net 372 sample|bot :-    not have it. I will not share with him.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-         This has been conversational spanish with grimlock, time for
+:irc.shakeababy.net 372 sample|bot :-         something more serious.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    --Welcome to irc.shakeababy.net part of Rizon--
+:irc.shakeababy.net 372 sample|bot :-    Listening on ports: 6660 - 6669, 7000 SSL: 6697, 8080 and 9999
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-    -- Server Rules
+:irc.shakeababy.net 372 sample|bot :-    - No Flooding
+:irc.shakeababy.net 372 sample|bot :-    - No Bots (auto-detected)
+:irc.shakeababy.net 372 sample|bot :-    - No Clones
+:irc.shakeababy.net 372 sample|bot :-    - No Spamming
+:irc.shakeababy.net 372 sample|bot :-    - No Takeovers
+:irc.shakeababy.net 372 sample|bot :-    - Clients must respond to VERSION requests!
+:irc.shakeababy.net 372 sample|bot :-    - We will not tolerate the distribution of child pornography.
+:irc.shakeababy.net 372 sample|bot :-    - Access granted to this server is a privilege.
+:irc.shakeababy.net 372 sample|bot :-    - Staff members may disconnect clients for any or no reason.
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 372 sample|bot :-   --Visit us in #help for assistance with anything irc related--
+:irc.shakeababy.net 372 sample|bot :-   --Visit us in #services for assistance from an IRC Operator--
+:irc.shakeababy.net 372 sample|bot :-   --Visit us in #shakeababy to help support this client server--
+:irc.shakeababy.net 372 sample|bot :-
+:irc.shakeababy.net 376 sample|bot :End of /MOTD command.
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg MODE sample|bot :+ix
+:Global!service@rizon.net NOTICE sample|bot :[Logon News - Mar 22 2010] 9Questions? Need help? Just bored? Check Out Rizon Forums which have several help documents and many other things like our random facts. Signon and tell us about yourself and your channel http://www.rizon.net/vbulletin/index.php Enjoy.
+:Global!service@rizon.net NOTICE sample|bot :[Logon News - May 08 2010] 4First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+:Global!service@rizon.net NOTICE sample|bot :[Random News - Apr 09 2009] Rizon has added a new feature called LimitServ to help rooms avoid flood attacks. Many rooms use custom bots for this already but we offer it as a free service on Rizon now. For more information see http://www.rizon.net/vbulletin/showthread.php?t=981 -Rizon Staff.
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :Pursuant to United States Code (USC), Title 18, Part 1, Section 2701 Part (c),
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :Rizon will do a passive scan of your IP address to check for open proxies.
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :If you do not consent to this scan, disconnect now. These scans are harmless and
+:py-bopm!python@proxyscan.rizon.net NOTICE sample|bot :will originate from proxyscan.rizon.net (208.100.20.98). For more information see #help.
+:py-ctcp!python@ctcp-scanner.rizon.net PRIVMSG sample|bot :VERSION
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg JOIN :#bashirc
+:irc.shakeababy.net MODE #bashirc +nt
+:irc.shakeababy.net 353 sample|bot = #bashirc :@sample|bot
+:irc.shakeababy.net 366 sample|bot #bashirc :End of /NAMES list.
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg JOIN :#lolchan
+:irc.shakeababy.net MODE #lolchan +nt
+:irc.shakeababy.net 353 sample|bot = #lolchan :@sample|bot
+:irc.shakeababy.net 366 sample|bot #lolchan :End of /NAMES list.
+:jwtt!ttwj@titty.wedge INVITE sample|bot :#chatulous
+:sample|bot!~bot@Rizon-B9AADD09.delta58.maxonline.com.sg JOIN :#chatulous
+:irc.shakeababy.net 332 sample|bot #chatulous :Official Hackulous and Apptrackr IRC Channel! :: Apptrackr currently has 22283 apps! :: Latest Public Installous: 3.3.5
+:irc.shakeababy.net 333 sample|bot #chatulous Apptrackr!~Apptrackr@Rizon-8BCBA725.net 1287411819
+:irc.shakeababy.net 353 sample|bot = #chatulous :sample|bot Raziel- Hackubot %andydam |night| ven000m staticsafe myMoD SnuAFK raidgh0st kinvig [-T-] sykotik div Stevey-Lapp Ally666 zBot Queo Smarag Olivier54 pondeuce Chappo dace marm187 YukaKing @Jeremy magik OliverSonne Spooky_Lurker MavereX Ramsey[LC] Surenix italodance trialsoft Stats &WYSE ThePirate dank_nugs madLyfe rool gueriLLaPunK cock Balke- %Gravity %Supaazn skram_ local-` pmarcos Tweek AwesomezGuy pcmike @Apptrackr xFinch713x Gymcon GadgetMan
+:irc.shakeababy.net 353 sample|bot = #chatulous :TrixIsOwned Caleo2 +iH8sn0w bigmcq77 Looler UndeadRevolution MMiller Condor Piggy maqr granduke +rcg wofh Smike Mac102250 @poedgirl i3744111 wof Rest_In_Peace maruko|AWAY MKJ samm DJPsycho|AFK h8 risc411 blunden FuryFire WyKeD wang WaiXan &Rizon x[x] oM ChanStat-01 reubencaron dizzy c Dark_Link Splintr mouwen Kaikz afk|afk_afk`afk +ChingPow zhongfu Nighthawk441 mbilker Z0ck3rOO7 jwtt joelixny TYLFC
+:irc.shakeababy.net 366 sample|bot #chatulous :End of /NAMES list.
+:Hackubot!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PART #chatulous
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :rofl
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :@jizz Kaikz
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :@help
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dissident
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net JOIN :#chatulous
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Hai
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :I'm back
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :@help
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Haha
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz WYSE
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :loser
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :!getlink 364049283
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :owned
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Fuck
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :oh the bot is gone?
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :owned
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :HAHA!
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Damn
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :OHH !
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Ass
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :OWNED
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :umm
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :....
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Splintr
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :@jizz /dev/null
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :Raziel-: try @links 364049283
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :lol
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :you guys want a restriction?
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :k
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :@links 364049283
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 31  2908   31   920    0     0   2874      0  0:00:01 --:--:--  0:00:01  3228100  2908  100  2908    0     0   9057      0 --:--:-- --:--:-- --:--:-- 10167
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0   176      0   2606 --:--:-- --:--:-- --:--:--  2606  0    12    0    12    0   176     13    191 --:--:-- --:--:-- --:--:--     0
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :4ibX
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :try beating my 93
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 94% of their load into /dev/null.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :OMG
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :FU
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :beat
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :is it suppose to be instant?
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Haha
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 21% of their load into /dev/null.
+:Rizon!Rizon@Services.Rizon.Net PRIVMSG #chatulous :New Release: AppTicker (3.4.1) -- Matrix - http://apptrackr.org/?act=viewapp&appid=351887785
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :Raziel-: no
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :you gotta wait
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 44% of their load into /dev/null.
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :it has to parse lots of stuff
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz PWNiT
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 17% of their load into /dev/null.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :LOL:(
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 100% of their load into /dev/null.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :I win
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :Splintr: you not gonna get anywhere
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :100%
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :splintr won
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :lol
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :lets try again
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :nothing yet
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :will it tell me if it doesnt find anything?
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 45% of their load into /dev/null.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :I win
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :@links 364049283
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2908  100  2908    0     0   9346      0 --:--:-- --:--:-- --:--:-- 10422
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0   176      0   2333 --:--:-- --:--:-- --:--:--  2333  0    12    0    12    0   176     14    213 --:--:-- --:--:-- --:--:--     0  0    12    0    12    0   176     14    213 --:--:-- --:--:-- --:--:--     0
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 54% of their load into /dev/null.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :Raziel-: I doubt the app is submitted to apptrackr
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :...
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :97 :D
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :97 :D
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz /dev/null
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 44% of their load into /dev/null.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 58% of their load into /dev/null.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:irc.shakeababy.net NOTICE sample|bot :*** Message to #chatulous throttled due to flooding
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :@jizz OliverSonne
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :o:
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz jwtt
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 9% of their load into jwtt.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :@jizz dude
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz sample|bot
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 33% of their load into sample|bot.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous ::D!
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :omg
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :you guys
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :spamming my bot
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :OliverSonne 100 % in your ass
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!jizz >> /dev/null
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous ::|
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :Splintr pumps 53% of their load into >> /dev/null.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :!jizz lol
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :Splintr: zBot is in msl
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :OliverSonne pumps 78% of their load into lol.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :jwtt: I'm not
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :I'm spamming zBot
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :!jizz YOUR FAT ASS
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :WTF RAN %
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :Splintr: do it somewhere else
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :OMG
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :no
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :lol
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :>:O
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :OliverSonne pumps 73% of their load into YOUR FAT ASS.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :!jizz YOUR FAT ASS
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :OliverSonne pumps 27% of their load into YOUR FAT ASS.
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :done
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :.k sample|bot ?
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :!jizz YOUR FAT ASS
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz OliverSonne
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :OliverSonne pumps 40% of their load into YOUR FAT ASS.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :!jizz YOUR FAT ASS
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :!part
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :OliverSonne pumps 59% of their load into YOUR FAT ASS.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :!jizz OliverSonne
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :PWNiT pumps 19% of their load into OliverSonne.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :!jizz OliverSonne
+:Splintr!Splintr@splintr.pwnmyi.com PRIVMSG #chatulous :bye
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :PWNiT pumps 67% of their load into OliverSonne.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :!jizz OliverSonne
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :PWNiT pumps 6% of their load into OliverSonne.
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Nooooooooooooo
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :!jizz OliverSonne
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :o.o
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :@jizz PWNiT
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :!jizz OliverSonne
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :PWNiT pumps 16% of their load into OliverSonne.
+:zBot!~zBot@z.Bot PRIVMSG #chatulous :PWNiT pumps 67% of their load into OliverSonne.
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :Surenix?
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jiz jwtt
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:jwtt!ttwj@titty.wedge PRIVMSG #chatulous :>:O
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Yay
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :Ooooops
+:Chappo!~Chappo@atheism.is.a.non.prophet.organization PRIVMSG #chatulous :wtf
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:Chappo!~Chappo@atheism.is.a.non.prophet.organization PRIVMSG #chatulous :stfu man
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz jwtt
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :SPAM
+:Chappo!~Chappo@atheism.is.a.non.prophet.organization PRIVMSG #chatulous :trolling the channel
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :just ignore them
+:Raziel-!~Raziel-@Rizon-DB1099C5.revip4.asianet.co.th PRIVMSG #chatulous :nice and quiet
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Chappo
+:Chappo!~Chappo@atheism.is.a.non.prophet.organization PRIVMSG #chatulous :ffs
+:OliverSonne!cgiirc@Rizon-C680DBA4.espnqu1.dynamic.dsl.tele.dk PRIVMSG #chatulous :Was i called?
+:|night|!~blade@Rizon-5D0D7AC5.pools.arcor-ip.net QUIT :Quit: night@NiGhT.is.Pro.Gamer.com has quit IRC (Killed (*.quakenet.org authstealing lamers - stay away from these people and tell your friends too))
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Chappo
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Chappo
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Chappo
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Chappo
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Chappo
+:[Squashy]!~Squashy]@this.is.magic.interglow JOIN :#chatulous
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :@jizz Chappo
+:Chappo!~Chappo@atheism.is.a.non.prophet.organization NICK :WYSE[C4iD]
+:PWNiT!~pwnit@Rizon-11FE66F2.pools.arcor-ip.net PRIVMSG #chatulous :lol
+:Rizon!Rizon@Services.Rizon.Net MODE #chatulous +ao WYSE[C4iD] WYSE[C4iD]
+:WYSE[C4iD]!~Chappo@WYSE.C4iD.Cracker MODE #chatulous +b *!*bot@*.delta58.maxonline.com.sg
+:WYSE[C4iD]!~Chappo@WYSE.C4iD.Cracker KICK #chatulous sample|bot :sample|bot
+PING :irc.shakeababy.net
+PING Recieved from server @ 22:39:01
+PING :irc.shakeababy.net
+PING Recieved from server @ 22:41:05
+PING :irc.shakeababy.net
+PING Recieved from server @ 22:43:10
+PING :irc.shakeababy.net
+PING Recieved from server @ 22:45:15

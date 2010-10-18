@@ -1,6 +1,11 @@
 #!/bin/bash
 #apptrackr app links fetcher module for bashIRC
 #Requires bashIRC 0.2.3 or newer.
+#Usage:
+# @links <app>
+#P.S: Not updated to use new fantasy hooks, anyone care to update it?
+$(help.hook "@links <apptrackr application id> -- Gets application download links from apptrackr :)") > /dev/null
+
 if [ "$(type)" = "PRIVMSG" ]; then
    cmd=$(text | awk '{print $1}')
    if [ "$cmd" = "@links" ]; then
@@ -9,9 +14,9 @@ if [ "$(type)" = "PRIVMSG" ]; then
          bastard=$(curl "http://ax.phobos.apple.com.edgesuite.net/WebObjects/MZStoreServices.woa/wa/wsLookup?id=$id" | sed -e 's/[{}]/''/g' | awk -v k="text" '{n=split($0,a,","); for (i=1; i<=n; i++) print a[i]}' | grep '"trackName":' | sed 's/:/ /1;s/"//g' )
          
          if [ -z "$bastard" ]; then
-            notice $(nick) Error: No such application
+            notice $(nick) "Error: No such application"
          else
-            notice $(nick) Grabbing top 7 links for app ${bastard#* * }...
+            notice $(nick) "Grabbing top 7 links for app ${bastard#* * }..."
             results=$(curl -d "request=%7B%22request%22%3A%22%7B%5C%22object%5C%22%3A%5C%22Link%5C%22%2C%5C%22action%5C%22%3A%5C%22get%5C%22%2C%5C%22args%5C%22%3A%7B%5C%22app_id%5C%22%3A$id%7D%7D%22%7D" http://api.apptrackr.org)
             parsed=$(echo "$results" | sed -e 's/[{}]/''/g' | awk -v k="text" '{n=split($0,a,","); for (i=1; i<=n; i++) print a[i]}' | sed -e 's/\\//g;s/:/=/g' | tr '}', '\n' | tr '{', '\n')
             idlist=$(echo "$parsed" | grep '"id"=' | head -n 10 > /tmp/idlist)
@@ -22,7 +27,7 @@ if [ "$(type)" = "PRIVMSG" ]; then
                while read data; do
                   if [ "$x" = "6" ]; then
                      sleep 1
-                     notice $(nick) Ver: $version .:. Cracker: $cracker .:. URL: http:$url
+                     notice $(nick) "Ver: $version .:. Cracker: $cracker .:. URL: http:$url"
                      break
                   fi
                   brix=$(echo "$data" | sed -e 's/=/ /g')

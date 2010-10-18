@@ -1,0 +1,23 @@
+#!/bin/bash
+#Timer, to prevent bot from timing out due to shit BASH exploits that can never be fixed. >:(
+# © ttwj 2010
+# Thanks go to
+# Kaikz, zhongfu for helping to find the exploit ;)
+x=1
+while true; do
+	if [ -e ".avgtime.$1" ] && [ -e ".endtime.$1" ]; then
+		endtime=$(cat .endtime."$1")
+		avgtime=$(cat .avgtime."$1")
+		curtime=$(date +%s)
+		if [ "$((curtime-endtime))" > "$((avgtime+6))" ] && [ "$x" > "1" ]; then 
+			#omg something might have failed >:O
+			#quick ping before we die!
+			echo "PING :" >> "$1.input"
+			#we're saved!
+		fi
+	fi
+	x=$((x+1))
+	sleep 20 #idk maybe 10?
+done
+		
+			

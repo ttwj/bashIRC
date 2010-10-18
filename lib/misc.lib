@@ -4,14 +4,14 @@
 #IRC tracking stuff.
 #Track nick changes on $(me)
 if [ "$(type)" = "NICK" ] && [ "$(nick)" = "$(me)" ]; then
-	#Get new nick
-	bashirc_me=$(text)
+   #Get new nick
+   bashirc_me=$(text)
 fi
 
 if [ "$(type)" = "376" ]; then #376 is End of MOTD command
    if [ "$nspass" ]; then
       if [ ! -e  "/tmp/.bashirc/con_identify" ]; then
-         msg nickserv identify $nspass
+         msg "nickserv identify $nspass"
          echo "o.o" > /tmp/.bashirc/con_identify
       fi
    fi
@@ -24,10 +24,10 @@ if [ "$(type)" = "376" ]; then #376 is End of MOTD command
 fi
 #CTCP Stuff below
 if [ "$(type)" = "PRIVMSG" ] && [ "$(dest nick)" ]; then
-	  cmd=$(echo "$(text)" | awk '{print $1}')
-      if [ "$cmd" = $'\001VERSION\001' ]; then
-         notice $(nick) VERSION ttwj bashIRC library $ver
+   cmd=$(echo "$(text)" | awk '{print $1}')
+   if [ "$cmd" = $'\001VERSION\001' ]; then
+      notice "$(nick) VERSION ttwj bashIRC library $ver"
       elif [ "$cmd" = $'\001TIME\001' ]; then
-         notice $(nick) TIME $(date)
-      fi
+      notice "$(nick) TIME $(date)"
+   fi
 fi
