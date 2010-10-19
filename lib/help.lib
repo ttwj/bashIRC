@@ -9,6 +9,7 @@ function help.show() {
 function help.hook() {
    #Hooks onto help
    echo "${@}" >> /tmp/.bashirc/help
+   help_count=$(cat .help.count)
    help_count=$((help_count+1))
    echo "$help_count" > .help.count
 }

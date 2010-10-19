@@ -34,10 +34,6 @@ if [ -z "$server" ]; then
    echo "Error: No server given for bot to connect, check bashIRC.conf"
    exit 1
 fi
-if [ -z "$channel" ]; then
-   echo "Error: No channels given for bot, check bashIRC.conf"
-   exit 1
-fi
 no=0
 for i in $server; do
    no=$((no+1))
