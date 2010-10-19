@@ -8,7 +8,7 @@ cat motd
 chmod 775 bashirc
 chmod 775 botscript
 chmod 775 .core
-chmod 775 .timer
+chmod 775 timer
 if [ ! -e /tmp/.bashirc ]; then
    mkdir /tmp/.bashirc
 fi

@@ -4,12 +4,16 @@
 # Thanks go to
 # Kaikz, zhongfu for helping to find the exploit ;)
 x=1
+echo "1" > ".avgtime.$1"
+echo "1" > ".endtime.$1"
 while true; do
 	if [ -e ".avgtime.$1" ] && [ -e ".endtime.$1" ]; then
 		endtime=$(cat .endtime."$1")
 		avgtime=$(cat .avgtime."$1")
 		curtime=$(date +%s)
-		if [ "$((curtime-endtime))" > "$((avgtime+6))" ] && [ "$x" > "1" ]; then 
+		diff=$((curtime-endtime))
+		avgdiff=$((avgtime+6))
+		if [ "$diff" > "$avgdiff" ] && [ "$x" > "1" ]; then 
 			#omg something might have failed >:O
 			#quick ping before we die!
 			echo "PING :" >> "$1.input"
