@@ -59,7 +59,7 @@ function me() {
 function bot.out() {
    #echoing "" > output is no longer recomended due to a known exploit that can get irritating :|
    #Check if bot has been exploited
-   remexploit=$(echo "${@}" | sed -e 's/:\(.*\)!\(.*\) PRIVMSG \(.*\) ://')
+   remexploit=$(echo "${@}" | sed -e 's/:\(.*\)!\(.*\) PRIVMSG \(.*\) ://;s/:\(.*\)!\(.*\) PRIVMSG \(.*\) :\(.*\)@\(.*\) \(.*\)//')
    if [ "$remexploit" = "${@}" ]; then
       echo "${@}" >> $raw_input
 	fi

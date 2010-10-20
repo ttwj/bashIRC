@@ -7,7 +7,7 @@ cat motd
 #Set chmod
 chmod 775 bashirc
 chmod 775 botscript
-chmod 775 .core
+chmod 775 core
 chmod 775 timer
 if [ ! -e /tmp/.bashirc ]; then
    mkdir /tmp/.bashirc
@@ -38,7 +38,7 @@ no=0
 for i in $server; do
    no=$((no+1))
 done
-if [ "$no" > "1" ]; then
+if [ "$no" != "1" ]; then
    echo "I see that you have more than one server specified in the config"
    echo "Please choose which one would you like to connect to."
    fail[0]="o.o"
@@ -56,6 +56,9 @@ if [ "$no" > "1" ]; then
    server=${fail[$no]}
    slap=$(echo -n "${fail[$no]}" | sed -e 's/\.//g')
    slap="$slap".input
+else
+	slap=$(echo "$server" | sed -e 's/\.//g')
+	slap="$slap.input"
 fi
 for i in ${@}; do
    if [ "$i" = "-d" ]; then
