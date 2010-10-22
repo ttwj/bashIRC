@@ -9,8 +9,7 @@ do read LINE || break
    echo "$LINE"
    #Ping controls 
    if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
-      server_ping=$(echo $LINE | awk '{print $2}')
-      echo "PONG :$serverping" >> $slap
+      echo "$LINE" | sed -e 's/PING/PONG/' >> "$slap"
 	  end=$(date +%s)
 	  #echo new time diff
 	  echo "$((end-start))" >> .time."$slap"

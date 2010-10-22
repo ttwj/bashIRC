@@ -2,7 +2,7 @@
 #Botservices 0.1 by ttwj
 #Module for bashIRC
 #Define some stuff
-basedir="/Users/ttwj/services"
+basedir="/home/irc/services"
 cmd=$(echo "$(text)" | awk '{print $1}')
 if [ "$(type)" = "MODE" ]; then
 	if [ "$(dest chan)" ]; then
@@ -26,12 +26,12 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
 		mv "$basedir/$(dest)_" "$basedir/$(dest)"
 		fi
 	fi
+	
 fi
 if [ "$(type)" = "JOIN" ] && [ "$(dest chan)" ]; then
 	if [ "$(cat "$basedir/$(dest)" | grep "$(host)" | grep "$(nick)")" ]; then
 		line=$(cat "$basedir/$(dest)" | grep "$(host)" | grep "$(nick)")
 		mode=$(echo "$line" | awk '{print $3}')
-		bot.out "MODE $(dest) $mode $(nick)"
+		msg operserv "MODE $(dest) $mode $(nick)"
 	fi
 fi
-		
