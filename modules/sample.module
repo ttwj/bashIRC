@@ -45,4 +45,7 @@ fi
          chan=$(echo "$input" | awk '{print $4}')
          chan=$(echo "$chan" | sed -e 's/://g')
          $(bot.out "JOIN $chan")
+		 if [ ! -e "~/services/$chan" ]; then
+			echo "" > "~/services/$chan"
+		fi
    fi

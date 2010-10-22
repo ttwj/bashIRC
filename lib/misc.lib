@@ -11,7 +11,7 @@ fi
 if [ "$(type)" = "376" ]; then #376 is End of MOTD command
    if [ "$nspass" ]; then
       if [ ! -e  "/tmp/.bashirc/con_identify" ]; then
-         msg "nickserv identify $nspass"
+         msg nickserv "identify $nspass"
          echo "o.o" > /tmp/.bashirc/con_identify
       fi
    fi
@@ -26,8 +26,8 @@ fi
 if [ "$(type)" = "PRIVMSG" ] && [ "$(dest nick)" ]; then
    cmd=$(echo "$(text)" | awk '{print $1}')
    if [ "$cmd" = $'\001VERSION\001' ]; then
-      notice "$(nick) VERSION ttwj bashIRC library $ver"
+      notice $(nick) "VERSION ttwj bashIRC library $ver"
       elif [ "$cmd" = $'\001TIME\001' ]; then
-      notice "$(nick) TIME $(date)"
+      notice $(nick) "TIME $(date)"
    fi
 fi

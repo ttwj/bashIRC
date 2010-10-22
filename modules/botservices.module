@@ -1,0 +1,37 @@
+#!/bin/bash
+#Botservices 0.1 by ttwj
+#Module for bashIRC
+#Define some stuff
+basedir="/Users/ttwj/services"
+cmd=$(echo "$(text)" | awk '{print $1}')
+if [ "$(type)" = "MODE" ]; then
+	if [ "$(dest chan)" ]; then
+		mode=$(text | awk '{print $1}')
+		modenick=$(text | awk '{print $2}')
+		if [ "$(cat "$basedir/$(dest)" | grep "MODE $modenick")" ]; then
+			line=$(cat "$basedir/$(dest)" | grep "MODE $modenick")
+			new=$(sed -e "s/$line/MODE $modenick $mode/" "$basedir/$(dest)" > "$basedir/$(dest)_")
+			mv "$basedir/$(dest)_" "$basedir/$(dest)"
+		else
+			echo "MODE $modenick $mode" >> "$basedir/$(dest)"
+		fi
+	fi
+fi
+if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
+	if [ "$(cat "$basedir/$(dest)" | grep "MODE $(nick)")" ]; then
+		lolwut=$(cat "$basedir/$(dest)" | grep "MODE $(nick)")
+		mode=$(echo "$lolwut" | awk '{print $3}')
+		if [ ! "$(echo "$lolwut" | awk '{print $4}')" ]; then
+		new=$(sed -e "s/$lolwut/$lolwut $(host)/" "$basedir/$(dest)" > "$basedir/$(dest)_")
+		mv "$basedir/$(dest)_" "$basedir/$(dest)"
+		fi
+	fi
+fi
+if [ "$(type)" = "JOIN" ] && [ "$(dest chan)" ]; then
+	if [ "$(cat "$basedir/$(dest)" | grep "$(host)" | grep "$(nick)")" ]; then
+		line=$(cat "$basedir/$(dest)" | grep "$(host)" | grep "$(nick)")
+		mode=$(echo "$line" | awk '{print $3}')
+		bot.out "MODE $(dest) $mode $(nick)"
+	fi
+fi
+		

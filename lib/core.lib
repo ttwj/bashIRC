@@ -18,7 +18,8 @@ function type() {
    echo "$command"
 }
 function host() {
-   host=$(echo "$input" | awk '{print $1}')
+   host=$(echo "$input" | awk '{print $1}' | sed -e 's/!/ /')
+   echo "$host" | awk '{print $2}'
 }
 function hostcheck() {
    #Currently, hostcheck uses bash regex, please read up more on it.
@@ -32,7 +33,7 @@ function hostcheck() {
 function dest() {
    dest=$(echo "$input" | awk '{print $3}')
    if [ -z "$1" ]; then
-      echo "$dest"
+      echo "$dest" | sed -e 's/://'
    else
       if [ "$(echo $dest | sed -e 's/#//')" = "$dest" ]; then #No changes after '#' is removed from dest, so it's to a nick.
          if [ "$1" = "nick" ]; then
@@ -40,7 +41,7 @@ function dest() {
          fi
       else
          if [ "$1" = "chan" ]; then
-            echo "$dest"
+            echo "$dest" | sed -e 's/://;s/&//g'
          fi
       fi
    fi
