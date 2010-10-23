@@ -10,6 +10,11 @@ do read LINE || break
    #Ping controls 
    if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
       echo "$LINE" | sed -e 's/PING/PONG/' >> "$slap"
+	  end=$(date +%s)
+	  diff=$((start-end))
+	  echo "$diff" >> .diff
+	  start=$(date +%s)
+	  echo "$end" >> .end
       echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
    fi
    if [ "$bashirc_debug" = "1" ]; then

@@ -1,0 +1,12 @@
+#!/bin/bash
+time=$(date +%s)
+diff=$(cat .diff)
+end=$(cat .end)
+while true; do
+if [ "$((time-diff))" -gt "$end" ]; then
+	input=$(echo "$1" | sed -e 's/.//')
+	echo "PING :$1" >> "$input.input"
+fi
+sleep 30
+done
+#Way shorter than the one in 0.3.2 that doesn't even work :/

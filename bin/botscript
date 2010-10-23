@@ -8,6 +8,9 @@ rm /tmp/.bashirc/help
 if [ ! -e "/tmp/.bashirc" ]; then
    mkdir /tmp/.bashirc
 fi
+if [ ! -e "/tmp/.bashirc/perm" ]; then
+   mkdir /tmp/.bashirc/perm
+fi
 
 #Load all libraries
 for i in $(ls ../lib/ | grep ".lib"); do

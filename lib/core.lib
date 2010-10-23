@@ -11,7 +11,7 @@ function notice() {
 function nick() {
    if [ ! "$bashirc_nick" ]; then
       bashirc_nick=$(echo "$input" | awk '{print $1}' | sed -e 's/://;s/!/ /;')
-      bashirc_nick=$(echo "$nick_" | awk '{print $1}')
+      bashirc_nick=$(echo "$bashirc_nick" | awk '{print $1}')
    fi
    echo "$bashirc_nick"
 }
