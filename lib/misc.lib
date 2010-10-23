@@ -17,7 +17,7 @@ if [ "$(type)" = "376" ]; then #376 is End of MOTD command
    fi
    if [ ! -e "/tmp/.bashirc/con_join" ]; then
       for i in "$channel"; do
-         join "$i"
+         bot.out "JOIN $i"
       done
       echo "o.o" > /tmp/con_join
    fi

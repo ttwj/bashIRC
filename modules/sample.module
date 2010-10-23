@@ -5,7 +5,7 @@ $(help.hook "$(fantasy.char)lmg <stuff> -- Googles stuff for you") > /dev/null
 $(help.hook "$(fantasy.char)shorten <url> -- Shortens URL for you :)") > /dev/null
 $(help.hook "$(fantasy.char)say <some stuff> -- Say that some stuff for you :p") > /dev/null
 function say() {
-	msg $(dest) "${@}"
+   msg $(dest) "${@}"
 }
 function shorten() {
    #Using fantasy omits the original fantasy word
@@ -26,7 +26,7 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
    cmd=$(text | awk '{print $1}')
    #Shell has been preserved to use the old format for devs who want a reference.
    if [ "$cmd" = "@shell" ]; then
-	if [ "$(nick)" = "Halon" ]; then
+      if [ "$(nick)" = "Halon" ]; then
          text=$(text)
          echo "$(eval ${text#* } )" > /tmp/stuff
          while read lol; do
@@ -34,18 +34,31 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
          done < /tmp/stuff
       else
          notice $(nick) "Who on earth do you think you are?"
-            
-	  fi
-	fi
-fi
-   #Autojoin on invite.
-   if [ "$(type)" = "INVITE" ]; then
-      #Alternative, check if nick who invited was owner or w/e
-             
-         chan=$(echo "$input" | awk '{print $4}')
-         chan=$(echo "$chan" | sed -e 's/://g')
-         $(bot.out "JOIN $chan")
-		 if [ ! -e "~/services/$chan" ]; then
-			echo "" > "~/services/$chan"
-		fi
+         
+      fi
    fi
+   if [ "$cmd" = "@sj" ]; then
+      echo "$(eval bash ~/bashIRC/modules/rand ~/bashIRC/modules/stevejobs)" > /tmp/stuff
+      while read lol; do
+         msg $(dest chan) "$lol"
+      done < /tmp/stuff
+   fi
+   
+   if [ "$cmd" = "@psi" ]; then
+      echo "$(eval bash ~/PSI.sh)" > /tmp/stuff
+      while read lol; do
+         msg $(dest chan) "$lol"
+      done < /tmp/stuff
+   fi
+fi
+#Autojoin on invite.
+if [ "$(type)" = "INVITE" ]; then
+   #Alternative, check if nick who invited was owner or w/e
+   
+   chan=$(echo "$input" | awk '{print $4}')
+   chan=$(echo "$chan" | sed -e 's/://g')
+   $(bot.out "JOIN $chan")
+   if [ ! -e "~/services/$chan" ]; then
+      echo "" > "~/services/$chan"
+   fi
+fi

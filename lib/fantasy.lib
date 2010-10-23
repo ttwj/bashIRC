@@ -12,8 +12,10 @@ function fantasy.hook() {
       fantasy=${fantasyword#$fantasy_char}
       if [ "$fantasy" = "$1" ]; then
          if [ "$2" ]; then
-			oright=$(text)
-            echo $($2 "${oright#* }")
+            oright=$(text)
+            $($2 "${oright#* }")
+			times=$(cat "/tmp/.bashirc/fantasy.$(nick)_$1")
+			echo "$((times+1))" > "/tmp/.bashirc/fantasy.$(nick)_$1"
          else
             echo 1
          fi
@@ -22,6 +24,24 @@ function fantasy.hook() {
       fi
    fi
 }
-fantasy.char() {
-   echo $fantasy_char
+function fantasy.char() {
+   echo "$fantasy_char"
 }
+function fantasy.flood() {
+	#Prevent flooding of fantasy commands
+	#Usuage: fantasy.flood <command> <times> <duration> <function to call (optional)>
+	if [ -e "/tmp/.bashirc/fantasy.$(nick)_$1" ]; then
+		times=$(cat "/tmp/.bashirc/fantasy.$(nick)_$1")
+		if [ "$times" -gt "$2" ]; then
+			if [ "$4" ]; then
+				$("$4")
+			else
+				echo 1
+			fi
+			sleep "$3"; echo "" > "/tmp/.bashirc/fantasy.$(nick)_$1"
+		else
+			sleep "$3"; echo "" > "/tmp/.bashirc/fantasy.$(nick)_$1"
+		fi
+	fi
+}
+

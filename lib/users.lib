@@ -1,11 +1,128 @@
 #!/bin/bash
 #User tracking library for bashirc
 if [ "$(type)" = "353" ]; then
-   users=${@:5}
+   users=${input#* * * * * }
+   #say "$users"
+   chan=$(echo "$input" | awk '{print $5}')
+   rm "/tmp/.bashirc/#"*
    for i in $users; do
-      status=${i:0:1}
-      #Gotta finish this
-      
+      echo "$i" >> /tmp/.bashirc/"$chan"
    done
-   
 fi
+if [ "$(type)" = "MODE" ] && [ "$(dest chan)" ]; then
+		mode=$(text | awk '{print $1}')
+		modenick=$(text | awk '{print $2}')
+		if [ "$modenick" ]; then
+			dest=$(dest)
+			#Detecting negatives are hard, so we'll ask for /names again :3
+			if [ "$(echo "$mode" | sed -e 's/-//')" != "$mode" ]; then
+				bot.out "NAMES $dest"
+			elif [ "$(echo "$mode" | sed -e 's/a//')" != "$mode" ] && [ "$chanprefix_a" ]; then
+				sed -e "s/\(.*\)$modenick/$chanprefix_a$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+			elif [ "$(echo "$mode" | sed -e 's/q//')" != "$mode" ] && [ "$chanprefix_q" ]; then
+				sed -e "s/\(.*\)$modenick/$chanprefix_q$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+			elif [ "$(echo "$mode" | sed -e 's/o//')" != "$mode" ]; then
+				sed -e "s/\(.*\)$modenick/$chanprefix_o$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+			elif [ "$(echo "$mode" | sed -e 's/h//')" != "$mode" ] && [ "$chanprefix_h" ]; then
+				sed -e "s/\(.*\)$modenick/$chanprefix_h$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+			elif [ "$(echo "$mode" | sed -e 's/v//')" != "$mode" ]; then
+				sed -e "s/\(.*\)$modenick/$chanprefix_v$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+			fi
+			mv /tmp/.bashirc/".$dest" /tmp/.bashirc/"$dest"
+		fi
+fi
+function user.ison() {
+   #user.ison <nick> <chan>
+   bleh=$(cat "/tmp/.bashirc/$(echo "${@}" | awk '{print $2}')" | grep "$(echo "${@}" | awk '{print $1}')")
+   if [ "$bleh" ]; then
+      echo "$bleh"
+   fi
+}
+function user.isop() {
+   #user.isop <nick> <chan>
+   if [ "$(user.ison $1 $2)" ]; then
+	  bleh=$(user.ison $1 $2)
+      prefix=${bleh:0:1}
+      if [ "$prefix" = "$chanprefix_o" ]; then
+         echo 1
+	 else
+         echo 0
+      fi
+   else
+      echo 0
+   fi
+}
+function user.ishop() {
+   if [ "$(user.ison $1 $2)" ]; then
+	  bleh=$(user.ison $1 $2)
+      prefix=${bleh:0:1}
+      if [ "$prefix" = "$chanprefix_h" ]; then
+         echo 1
+      else
+         echo 0
+      fi
+   else
+      echo 0
+   fi
+}
+function user.isvoice() {
+   if [ "$(user.ison $1 $2)" ]; then
+   bleh=$(user.ison $1 $2)
+      prefix=${bleh:0:1}
+      if [ "$prefix" = "$chanprefix_v" ]; then
+         echo 1
+      else
+         echo 0
+      fi
+   else
+      echo 0
+   fi
+}
+function user.isprotect() {
+   if [ "$(user.ison $1 $2)" ] && [ "$chanprefix_a" ]; then
+   bleh=$(user.ison $1 $2)
+      prefix=${bleh:0:1}
+      if [ "$prefix" = "$chanprefix_a" ]; then
+         echo 1
+      else
+         echo 0
+      fi
+   else
+      echo 0
+   fi
+}
+function user.isowner() {
+   if [ "$(user.ison $1 $2)" ] && [ "$chanprefix_q" ]; then
+   bleh=$(user.ison $1 $2)
+      prefix=${bleh:0:1}
+      if [ "$prefix" = "$chanprefix_q" ]; then
+         echo 1
+      else
+         echo 0
+      fi
+   else
+      echo 0
+   fi
+}
+function user.ignore() {
+   #Ignore list is at /tmp/.bashirc/perm/ignore
+   if [ -e "/tmp/.bashirc/perm" ]; then
+	mkdir /tmp/.bashirc/perm
+	fi
+   if [ -z "$(cat /tmp/.bashirc/perm/ignore | grep "$(nick)$(host)")" ]; then
+      echo "$(nick)$(host)" >> /tmp/.bashirc/perm/ignore
+      echo 1
+   else
+      echo 0
+   fi
+}
+function user.unignore() {
+   brix=$(cat /tmp/.bashirc/perm/ignore | grep "$(nick)$(host)")
+   if [ "$brix" ]; then
+      new=$(sed -e "s/$brix//" /tmp/.bashirc/perm/ignore > /tmp/.bashirc/.ignore)
+      mv /tmp/.bashirc/.ignore /tmp/.bashirc/perm/ignore
+      echo 1
+   else
+      echo 0
+   fi
+}

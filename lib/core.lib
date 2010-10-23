@@ -9,17 +9,23 @@ function notice() {
    $(bot.out "NOTICE $1 :${@:2}")
 }
 function nick() {
-   nick_=$(echo "$input" | awk '{print $1}' | sed -e 's/://;s/!/ /;')
-   nick_=$(echo "$nick_" | awk '{print $1}')
-   echo "$nick_"
+   if [ ! "$bashirc_nick" ]; then
+      bashirc_nick=$(echo "$input" | awk '{print $1}' | sed -e 's/://;s/!/ /;')
+      bashirc_nick=$(echo "$nick_" | awk '{print $1}')
+   fi
+   echo "$bashirc_nick"
 }
 function type() {
-   command=$(echo "$input" | awk '{print $2}')
-   echo "$command"
+   if [ ! "$bashirc_command" ]; then
+      bashirc_command=$(echo "$input" | awk '{print $2}')
+   fi
+   echo "$bashirc_command"
 }
 function host() {
-   host=$(echo "$input" | awk '{print $1}' | sed -e 's/!/ /')
-   echo "$host" | awk '{print $2}'
+   if [ ! "$bashirc_host" ]; then
+      bashirc_host=$(echo "$input" | awk '{print $1}' | sed -e 's/!/ /' | awk '{print $2}')
+   fi
+   echo "$bashirc_host"
 }
 function hostcheck() {
    #Currently, hostcheck uses bash regex, please read up more on it.
@@ -31,7 +37,9 @@ function hostcheck() {
    fi
 }
 function dest() {
-   dest=$(echo "$input" | awk '{print $3}')
+   if [ ! "$dest" ]; then
+      dest=$(echo "$input" | awk '{print $3}')
+   fi
    if [ -z "$1" ]; then
       echo "$dest" | sed -e 's/://'
    else
@@ -47,8 +55,10 @@ function dest() {
    fi
 }
 function text() {
-   text=${input#* * * }
-   text=${text#:}
+   if [ ! "$text" ]; then
+      text=${input#* * * }
+      text=${text#:}
+   fi
    echo "$text"
 }
 function join() {
@@ -63,5 +73,5 @@ function bot.out() {
    remexploit=$(echo "${@}" | sed -e 's/:\(.*\)!\(.*\) PRIVMSG \(.*\) ://;s/:\(.*\)!\(.*\) PRIVMSG \(.*\) :\(.*\)@\(.*\) \(.*\)//')
    if [ "$remexploit" = "${@}" ]; then
       echo "${@}" >> $raw_input
-	fi
+   fi
 }

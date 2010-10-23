@@ -4,12 +4,9 @@ function help.show() {
    while read help; do
       notice $(nick) "$help"
    done < /tmp/.bashirc/help
-   notice $(nick) "$(cat .help.count) help showed."
+   notice $(nick) "$(wc -l /tmp/.bashirc/help | awk '{print $1}') help showed."
 }
 function help.hook() {
    #Hooks onto help
    echo "${@}" >> /tmp/.bashirc/help
-   help_count=$(cat .help.count)
-   help_count=$((help_count+1))
-   echo "$help_count" > .help.count
 }
