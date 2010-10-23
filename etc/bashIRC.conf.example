@@ -3,7 +3,7 @@
 #Rename this file to bot.conf and run bashIRC.
 #Bot configuration
 #me - Nickname of bot
-me="sample|bot"
+me="sample|bot$RANDOM"
 #user - username of bot
 user="bot"
 
@@ -16,7 +16,7 @@ channel="#bashirc #lolchan"
 
 #Identification configuration
 #Leave this out if you don't want the bot to identify to Nickserv on connect
-#nspass="somesekretp3ss"
+#nspass="somes3kr3tpass"
 
 #Fantasy char
 #Character used for fantasy, eg ! for !hello
@@ -45,7 +45,7 @@ loadallmodules="yes"
 #dest=$(dest)
 
 
-# [ OPTIONAL ] (to only be used in 0.3.1)
+# [ OPTIONAL ] (to only be used in 0.4)
 #Chanprefixes
 # Modes like +a should be with which prefix
 #	Use this prefix settings if you're using ircds such as Unrealircd, InspIRCD, plexus etc. Refer to the network's ircops for more info.

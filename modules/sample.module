@@ -26,7 +26,7 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
    cmd=$(text | awk '{print $1}')
    #Shell has been preserved to use the old format for devs who want a reference.
    if [ "$cmd" = "@shell" ]; then
-      if [ "$(hostcheck *ttwj*@o.o)" = "1" ]; then
+	if [ "$(nick)" = "Halon" ]; then
          text=$(text)
          echo "$(eval ${text#* } )" > /tmp/stuff
          while read lol; do

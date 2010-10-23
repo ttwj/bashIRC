@@ -8,7 +8,6 @@ cat motd
 chmod 775 bashirc
 chmod 775 botscript
 chmod 775 core
-chmod 775 timer
 if [ ! -e /tmp/.bashirc ]; then
    mkdir /tmp/.bashirc
 fi
@@ -70,8 +69,7 @@ done
 identified="no"
 echo "NICK $me" > $slap
 echo "USER $user +iw$bot $me :$0" >> $slap
-echo "Hit enter after you see the next line to run bot."
-nohup ./timer "$slap"&disown
+
 if [ "$nohup" = "1" ]; then
    nohup ./core "$slap" "$server" "$port"&disown
    echo "Bot runned sucessfully"

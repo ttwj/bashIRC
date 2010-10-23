@@ -10,19 +10,6 @@ do read LINE || break
    #Ping controls 
    if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
       echo "$LINE" | sed -e 's/PING/PONG/' >> "$slap"
-	  end=$(date +%s)
-	  #echo new time diff
-	  echo "$((end-start))" >> .time."$slap"
-	  start=$(date +%s)
-	  #Get total time
-	  while read time; do
-		ttime=$((ttime+time))
-	  done < .time."$slap"
-	  #Get average time
-	  nos=$(wc -l ".time.$slap" | awk '{print $1}')
-	  avgtime=$((ttime/nos))
-	  echo "$agvtime" > .avgtime."$slap"
-	  echo "$end" > .endtime."$slap"
       echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
    fi
    if [ "$bashirc_debug" = "1" ]; then
