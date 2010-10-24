@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ ! -e ../logs/ ]; then
+mkdir ../logs
+fi
+if [ ! -e ../logs/$raw_input ]; then
+mkdir ../logs/$raw_input
+fi
+if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
+   if [ ! -e ../logs/$raw_input ]; then
+      mkdir -p ../logs/$raw_input
+   fi
+   echo $(echo "[$(echo $(date) | awk {'print $4'} )] <$(nick)> $(text)") >> ../logs/$raw_input/$(dest chan).txt
+fi
