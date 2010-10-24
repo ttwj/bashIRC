@@ -1,0 +1,6 @@
+#!/bin/bash
+#Part of relay module for bashIRC
+# © ttwj 2010
+if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ] && [ -e "$(dest chan).relay" ]; then
+	echo "$raw_input <$(nick)> $(text)" >> "$(dest chan).relay"
+fi

@@ -1,0 +1,9 @@
+The relay module is currently in beta stage.
+To use: 
+1. Move relay.module from contrib/ to modules/
+2. In bin/, ./relay "<channel>" "<corresponding input file>"
+
+* And no, I will not tell you what does corresponding input file means, figure it out your own.
+
+- More documentation to come when it's fully ready :)
+

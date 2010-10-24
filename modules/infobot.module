@@ -1,0 +1,45 @@
+#!/bin/bash
+if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
+   if [ "$(text | awk '{print $1}')" = "what" ] && [ "$(text | awk '{print $2}')" = "is" ]; then
+      line=$(cat stuff | grep -i "info:$(text | awk '{print $3}' | sed -e 's/?//')")
+      if [ ! "$line" ]; then
+         notice $(nick) "Sorry, no definition for $(text | awk '{print $3}') exists."
+      else
+         echo "$line" > /tmp/shit
+		 x=
+         while read shit; do
+            msg $(dest) "${shit#* }"
+         done < /tmp/shit
+      fi
+      elif [ "$(text | awk '{print $1}')" = "what" ] && [ "$(text | awk '{print $2}')" = "are" ]; then
+      line=$(cat stuff | grep -i "info:$(text | awk '{print $3}' | sed -e 's/?//')")
+      if [ ! "$line" ]; then
+         notice $(nick) "Sorry, no definition for $(text | awk '{print $3}') exists."
+      else
+         echo "$line" > /tmp/shit
+         while read shit; do
+            msg $(dest) "${shit#* }"
+         done < /tmp/shit
+      fi
+      elif [ "$(text | awk '{print $2}')" = "is" ]; then
+      
+      stuff=$(sed -e "s/info:$(text | awk '{print $2}') \(.*\)/info:$(text | awk '{print $2}') $(text)/" "stuff")
+      if [ ! "$(cat stuff | grep -i "info:$(text | awk '{print $1}')")" ]; then
+         echo "info:$(text | awk '{print $1}') $(text)" >> stuff
+      else
+         stuff=$(sed -e "s/info:$(text | awk '{print $2}') \(.*\)/info:$(text | awk '{print $2}') $(text)/" "stuff" > .stuff)
+         mv .stuff stuff
+      fi
+      notice $(nick) "Added definition"
+      elif [ "$(text | awk '{print $2}')" = "are" ]; then
+      
+      stuff=$(sed -e "s/info:$(text | awk '{print $2}') \(.*\)/info:$(text | awk '{print $2}') $(text)/" "stuff")
+      if [ ! "$(cat stuff | grep -i "info:$(text | awk '{print $1}')")" ]; then
+         echo "info:$(text | awk '{print $1}') $(text)" >> stuff
+      else
+         stuff=$(sed -e "s/info:$(text | awk '{print $2}') \(.*\)/info:$(text | awk '{print $2}') $(text)/" "stuff" > .stuff)
+         mv .stuff stuff
+      fi
+      notice $(nick) "Added definition"
+   fi
+fi

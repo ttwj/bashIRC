@@ -1,0 +1,23 @@
+#!/bin/bash
+iinput=$(echo "$2" | sed -e 's/.//')
+iinput="i$iinput"
+while true; do
+   line=$(cat "$1.relay")
+
+	lines=$(wc -l "$1.relay" | awk '{print $1}')
+      while read line; do
+			x=$((x+1))
+	     input=$(echo "$line" | awk '{print $1}')
+	     if [ "$input" != "$iinput" ] && [ "$line" ]; then
+         if [ "$(echo "$line" | awk '{print $1}')" ]; then
+			cat "$1.relay" | sed -e "/$line/d" > "$1.relay_"; mv "$1.relay_" "$1.relay"
+            echo "PRIVMSG #bashirc :${line#* }" >> "$iinput"
+			#mv "$1.relay_" "$1.relay"
+			sleep 1
+         fi
+		 fi
+      done < "$1.relay"
+		
+   
+   
+done
