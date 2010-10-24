@@ -35,7 +35,7 @@ loadallmodules="yes"
 #loadmodule="~/ircbot/modules/google.module ~/ircbot/modules/hi.module"
 
 #Check ;) Comment out this
-#echo "Check your conf…."; exit 0;
+echo "Check your conf…."; exit 0;
 
 #Compability with older botscript
 #Uncomment this section if you want 0.1 backwards compability in 0.2 and above

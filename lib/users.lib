@@ -13,23 +13,31 @@ if [ "$(type)" = "MODE" ] && [ "$(dest chan)" ]; then
 		mode=$(text | awk '{print $1}')
 		modenick=$(text | awk '{print $2}')
 		if [ "$modenick" ]; then
-			dest=$(dest)
 			#Detecting negatives are hard, so we'll ask for /names again :3
 			if [ "$(echo "$mode" | sed -e 's/-//')" != "$mode" ]; then
-				bot.out "NAMES $dest"
+				bot.out "NAMES $(dest)"
 			elif [ "$(echo "$mode" | sed -e 's/a//')" != "$mode" ] && [ "$chanprefix_a" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_a$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+				sed -e "s/\(.*\)$modenick/$chanprefix_a$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			elif [ "$(echo "$mode" | sed -e 's/q//')" != "$mode" ] && [ "$chanprefix_q" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_q$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+				sed -e "s/\(.*\)$modenick/$chanprefix_q$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			elif [ "$(echo "$mode" | sed -e 's/o//')" != "$mode" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_o$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+				sed -e "s/\(.*\)$modenick/$chanprefix_o$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			elif [ "$(echo "$mode" | sed -e 's/h//')" != "$mode" ] && [ "$chanprefix_h" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_h$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+				sed -e "s/\(.*\)$modenick/$chanprefix_h$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			elif [ "$(echo "$mode" | sed -e 's/v//')" != "$mode" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_v$modenick/" "/tmp/.bashirc/$dest" > /tmp/.bashirc/".$dest"
+				sed -e "s/\(.*\)$modenick/$chanprefix_v$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			fi
-			mv /tmp/.bashirc/".$dest" /tmp/.bashirc/"$dest"
+			mv /tmp/.bashirc/"$raw_input$(dest) /tmp/.bashirc/"$raw_input$(dest)"
 		fi
+fi
+if [ "$(type)" = "PART" ] && [ "$(dest chan)" ]; then
+	if [ "$(cat "/tmp/.bashirc/$(dest)" | grep "$(nick)")" ]; then
+		sed -e "s/\(.*\)$(nick)//" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/".$(dest)"
+		mv /tmp/.bashirc/".$(dest)" /tmp/.bashirc/"$raw_input$(dest)"
+	fi
+fi
+if [ "$(type)" = "JOIN" ] && [ "$(dest chan)" ]; then
+		echo "$(nick)" >> "/tmp/.bashirc/$raw_input$(dest)"
 fi
 function user.ison() {
    #user.ison <nick> <chan>

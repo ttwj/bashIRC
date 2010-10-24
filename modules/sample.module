@@ -1,5 +1,5 @@
 #!/bin/bash
-#Sample module for bashIRC 0.3-1
+#Sample module for bashIRC 0.4
 owner="Halon"
 $(help.hook "$(fantasy.char)lmg <stuff> -- Googles stuff for you") > /dev/null
 $(help.hook "$(fantasy.char)shorten <url> -- Shortens URL for you :)") > /dev/null
@@ -17,11 +17,14 @@ function lmg() {
       msg $(dest) $(curl "http://is.gd/api.php?longurl=http://lmgtfy.com/?q=${@}")
    fi
 }
+function fuck() {
+   msg $(dest) "Fuck off $(nick), stop spamming me"
+}
 #Hook onto fantasy.
 hook=$(fantasy.hook lmg lmg > /dev/null)
 hook=$(fantasy.hook shorten shorten > /dev/null)
 hook=$(fantasy.hook say say > /dev/null)
-
+hook=$(fantasy.flood say 3 2 fuck > /dev/null)
 if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
    cmd=$(text | awk '{print $1}')
    #Shell has been preserved to use the old format for devs who want a reference.
@@ -43,13 +46,13 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
          msg $(dest chan) "$lol"
       done < /tmp/stuff
    fi
-   
-   if [ "$cmd" = "@psi" ]; then
-      echo "$(eval bash ~/PSI.sh)" > /tmp/stuff
-      while read lol; do
-         msg $(dest chan) "$lol"
-      done < /tmp/stuff
-   fi
+   #mm some stuff I made to parse the Pollution Index of my country :)
+   #if [ "$cmd" = "@psi" ]; then
+   #  echo "$(eval bash ~/PSI.sh)" > /tmp/stuff
+   # while read lol; do
+   #   msg $(dest chan) "$lol"
+   #done < /tmp/stuff
+   #fi
 fi
 #Autojoin on invite.
 if [ "$(type)" = "INVITE" ]; then
@@ -61,4 +64,7 @@ if [ "$(type)" = "INVITE" ]; then
    if [ ! -e "~/services/$chan" ]; then
       echo "" > "~/services/$chan"
    fi
+fi
+if [ "$(type)" = "JOIN" ] && [ "$(nick)" = "Halon" ]; then
+   msg $(dest chan) "[Halon] Is awesomesauce!"
 fi
