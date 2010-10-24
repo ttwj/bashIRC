@@ -24,7 +24,7 @@ function fuck() {
 hook=$(fantasy.hook lmg lmg > /dev/null)
 hook=$(fantasy.hook shorten shorten > /dev/null)
 hook=$(fantasy.hook say say > /dev/null)
-hook=$(fantasy.flood say 3 2 fuck > /dev/null)
+#hook=$(fantasy.flood say 3 2 fuck > /dev/null)
 if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
    cmd=$(text | awk '{print $1}')
    #Shell has been preserved to use the old format for devs who want a reference.

@@ -12,7 +12,7 @@ fi
 if [ ! -e "/tmp/.bashirc/perm" ]; then
    mkdir /tmp/.bashirc/perm
 fi
-if [ !-e /tmp/.bashirc/perm/ignore ]; then
+if [ ! -e /tmp/.bashirc/perm/ignore ]; then
 	echo "" > /tmp/.bashirc/perm/ignore
 fi
 #Load all libraries

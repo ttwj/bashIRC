@@ -27,21 +27,21 @@ function fantasy.hook() {
 function fantasy.char() {
    echo "$fantasy_char"
 }
-function fantasy.flood() {
-	#Prevent flooding of fantasy commands
-	#Usuage: fantasy.flood <command> <times> <duration> <function to call (optional)>
-	if [ -e "/tmp/.bashirc/fantasy.$(nick)_$1" ]; then
-		times=$(cat "/tmp/.bashirc/fantasy.$(nick)_$1")
-		if [ "$times" -gt "$2" ]; then
-			if [ "$4" ]; then
-				$("$4")
-			else
-				echo 1
-			fi
-			sleep "$3"; echo "" > "/tmp/.bashirc/fantasy.$(nick)_$1"
-		else
-			sleep "$3"; echo "" > "/tmp/.bashirc/fantasy.$(nick)_$1"
-		fi
-	fi
-}
+#Fantasy.flood is currently borked, someone care to fix it?
+#function fantasy.flood() {
+#	#Prevent flooding of fantasy commands
+#	#Usuage: fantasy.flood <command> <times> <duration> <function to call (optional)>
+#	if [ -e "/tmp/.bashirc/fantasy.$(nick)_$1" ]; then
+#		times=$(cat "/tmp/.bashirc/fantasy.$(nick)_$1")
+#			if [ "$4" ]; then
+#				$("$4")
+#			else
+#				echo 1
+#			fi
+#			sleep "$3"; echo "" > "/tmp/.bashirc/fantasy.$(nick)_$1"
+#		else
+#			sleep "$3"; echo "" > "/tmp/.bashirc/fantasy.$(nick)_$1"
+#		fi
+#	fi
+#}
 
