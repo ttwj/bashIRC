@@ -10,34 +10,35 @@ if [ "$(type)" = "353" ]; then
    done
 fi
 if [ "$(type)" = "MODE" ] && [ "$(dest chan)" ]; then
-		mode=$(text | awk '{print $1}')
-		modenick=$(text | awk '{print $2}')
-		if [ "$modenick" ]; then
-			#Detecting negatives are hard, so we'll ask for /names again :3
-			if [ "$(echo "$mode" | sed -e 's/-//')" != "$mode" ]; then
-				bot.out "NAMES $(dest)"
-			elif [ "$(echo "$mode" | sed -e 's/a//')" != "$mode" ] && [ "$chanprefix_a" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_a$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
+   mode=$(text | awk '{print $1}')
+   modenick=$(text | awk '{print $2}')
+   if [ "$modenick" ]; then
+      #Detecting negatives are hard, so we'll ask for /names again :3
+      if [ "$(echo "$mode" | sed -e 's/-//')" != "$mode" ]; then
+         bot.out "NAMES $(dest)"
+         elif [ "$(echo "$mode" | sed -e 's/a//')" != "$mode" ] && [ "$chanprefix_a" ]; then
+         sed -e "s/\(.*\)$modenick/$chanprefix_a$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			elif [ "$(echo "$mode" | sed -e 's/q//')" != "$mode" ] && [ "$chanprefix_q" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_q$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
-			elif [ "$(echo "$mode" | sed -e 's/o//')" != "$mode" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_o$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
+         sed -e "s/\(.*\)$modenick/$chanprefix_q$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
+         elif [ "$(echo "$mode" | sed -e 's/o//')" != "$mode" ]; then
+         sed -e "s/\(.*\)$modenick/$chanprefix_o$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			elif [ "$(echo "$mode" | sed -e 's/h//')" != "$mode" ] && [ "$chanprefix_h" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_h$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
-			elif [ "$(echo "$mode" | sed -e 's/v//')" != "$mode" ]; then
-				sed -e "s/\(.*\)$modenick/$chanprefix_v$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
+         sed -e "s/\(.*\)$modenick/$chanprefix_h$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
+         elif [ "$(echo "$mode" | sed -e 's/v//')" != "$mode" ]; then
+         sed -e "s/\(.*\)$modenick/$chanprefix_v$modenick/" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/"$raw_input$(dest)
 			fi
-			mv /tmp/.bashirc/"$raw_input$(dest) /tmp/.bashirc/"$raw_input$(dest)"
-		fi
+         mv /tmp/.bashirc/"$raw_input$(dest) /tmp/.bashirc/"$raw_input$(dest)"
+      fi
+   fi
 fi
 if [ "$(type)" = "PART" ] && [ "$(dest chan)" ]; then
-	if [ "$(cat "/tmp/.bashirc/$(dest)" | grep "$(nick)")" ]; then
-		sed -e "s/\(.*\)$(nick)//" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/".$(dest)"
-		mv /tmp/.bashirc/".$(dest)" /tmp/.bashirc/"$raw_input$(dest)"
-	fi
+   if [ "$(cat "/tmp/.bashirc/$(dest)" | grep "$(nick)")" ]; then
+      sed -e "s/\(.*\)$(nick)//" "/tmp/.bashirc/$raw_input$(dest)" > /tmp/.bashirc/".$(dest)"
+      mv /tmp/.bashirc/".$(dest)" /tmp/.bashirc/"$raw_input$(dest)"
+   fi
 fi
 if [ "$(type)" = "JOIN" ] && [ "$(dest chan)" ]; then
-		echo "$(nick)" >> "/tmp/.bashirc/$raw_input$(dest)"
+   echo "$(nick)" >> "/tmp/.bashirc/$raw_input$(dest)"
 fi
 function user.ison() {
    #user.ison <nick> <chan>
@@ -49,11 +50,11 @@ function user.ison() {
 function user.isop() {
    #user.isop <nick> <chan>
    if [ "$(user.ison $1 $2)" ]; then
-	  bleh=$(user.ison $1 $2)
+      bleh=$(user.ison $1 $2)
       prefix=${bleh:0:1}
       if [ "$prefix" = "$chanprefix_o" ]; then
          echo 1
-	 else
+      else
          echo 0
       fi
    else
@@ -62,7 +63,7 @@ function user.isop() {
 }
 function user.ishop() {
    if [ "$(user.ison $1 $2)" ]; then
-	  bleh=$(user.ison $1 $2)
+      bleh=$(user.ison $1 $2)
       prefix=${bleh:0:1}
       if [ "$prefix" = "$chanprefix_h" ]; then
          echo 1
@@ -75,7 +76,7 @@ function user.ishop() {
 }
 function user.isvoice() {
    if [ "$(user.ison $1 $2)" ]; then
-   bleh=$(user.ison $1 $2)
+      bleh=$(user.ison $1 $2)
       prefix=${bleh:0:1}
       if [ "$prefix" = "$chanprefix_v" ]; then
          echo 1
@@ -88,7 +89,7 @@ function user.isvoice() {
 }
 function user.isprotect() {
    if [ "$(user.ison $1 $2)" ] && [ "$chanprefix_a" ]; then
-   bleh=$(user.ison $1 $2)
+      bleh=$(user.ison $1 $2)
       prefix=${bleh:0:1}
       if [ "$prefix" = "$chanprefix_a" ]; then
          echo 1
@@ -101,7 +102,7 @@ function user.isprotect() {
 }
 function user.isowner() {
    if [ "$(user.ison $1 $2)" ] && [ "$chanprefix_q" ]; then
-   bleh=$(user.ison $1 $2)
+      bleh=$(user.ison $1 $2)
       prefix=${bleh:0:1}
       if [ "$prefix" = "$chanprefix_q" ]; then
          echo 1
@@ -115,8 +116,8 @@ function user.isowner() {
 function user.ignore() {
    #Ignore list is at /tmp/.bashirc/perm/ignore
    if [ -e "/tmp/.bashirc/perm" ]; then
-	mkdir /tmp/.bashirc/perm
-	fi
+      mkdir /tmp/.bashirc/perm
+   fi
    if [ -z "$(cat /tmp/.bashirc/perm/ignore | grep "$(nick)$(host)")" ]; then
       echo "$(nick)$(host)" >> /tmp/.bashirc/perm/ignore
       echo 1
