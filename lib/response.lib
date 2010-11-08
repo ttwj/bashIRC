@@ -1,0 +1,14 @@
+#!/bin/bash
+#Response library for bashIRC
+function response.hook() {
+#Usage response.hook "<response msg>" <function>
+	if [ "$1" = "$(type)" ]; then
+		$2
+	fi
+}
+function msg.hook() {
+#Usage msg.hook "" "<function>
+	if [[ "$(text)" = $1 ]]; then
+		echo ""
+	fi
+}

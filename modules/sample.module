@@ -14,6 +14,7 @@ function shorten() {
 }
 function lmg() {
    if [ "${@}" ]; then
+	 msg $(dest) "${@}"
       msg $(dest) $(curl "http://is.gd/api.php?longurl=http://lmgtfy.com/?q=${@}")
    fi
 }
@@ -47,12 +48,12 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
       done < /tmp/stuff
    fi
    #mm some stuff I made to parse the Pollution Index of my country :)
-   #if [ "$cmd" = "@psi" ]; then
-   #  echo "$(eval bash ~/PSI.sh)" > /tmp/stuff
-   # while read lol; do
-   #   msg $(dest chan) "$lol"
-   #done < /tmp/stuff
-   #fi
+   if [ "$cmd" = "@psi" ]; then
+      echo "$(eval bash ~/PSI.sh)" > /tmp/stuff
+      while read lol; do
+         msg $(dest chan) "$lol"
+      done < /tmp/stuff
+   fi
 fi
 #Autojoin on invite.
 if [ "$(type)" = "INVITE" ]; then

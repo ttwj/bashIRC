@@ -13,9 +13,14 @@ function fantasy.hook() {
       if [ "$fantasy" = "$1" ]; then
          if [ "$2" ]; then
             oright=$(text)
-            $($2 "${oright#* }")
-			times=$(cat "/tmp/.bashirc/fantasy.$(nick)_$1")
-			echo "$((times+1))" > "/tmp/.bashirc/fantasy.$(nick)_$1"
+			#Thanks to AwesomezGuy for finding a bug here :)
+			if [ "${oright#* }" != "$fantasyword" ]; then
+				$($2 "${oright#* }")
+				times=$(cat "/tmp/.bashirc/fantasy.$(nick)_$1")
+				echo "$((times+1))" > "/tmp/.bashirc/fantasy.$(nick)_$1"
+			else
+				$($2 "")
+			fi
          else
             echo 1
          fi

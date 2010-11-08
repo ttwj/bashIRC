@@ -1,5 +1,6 @@
 #!/bin/bash
 ver="$(cat ~/bashIRC/VERSION)"
+export ver
 source ../etc/bashIRC.conf
 input=${@}
 input=${input#* }
@@ -15,22 +16,17 @@ fi
 if [ ! -e /tmp/.bashirc/perm/ignore ]; then
 	echo "" > /tmp/.bashirc/perm/ignore
 fi
-#Load all libraries
-for i in $(ls ../lib/ | grep ".lib"); do
-   source ../lib/$i
-done
-if [ -z "$(cat /tmp/.bashirc/perm/ignore | grep "$(nick)$(host)")" ]; then
-	#Module system
+
+#Module system
 	if [ "$loadallmodules" = "yes" ]; then
 	for i in $(ls ../modules | grep ".module"); do
-		source ../modules/$i
+		nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
 	done
 	else
 	for i in $loadmodule; do
-		source "$i"
+		nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
 	done
 	fi
-
 	#Our help command :)
 	hook=$(fantasy.hook help help.show > /dev/null)
-fi
+

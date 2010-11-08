@@ -1,0 +1,9 @@
+function gay() {
+if [ ! "$(echo "${@}" | awk '{print $1}')" ]; then
+msg $(dest chan) "$1 is ${RANDOM:0:2}% gay"
+else
+msg $(dest chan) "$(nick) is ${RANDOM:0:2}% gay"
+fi
+}
+fantasy.hook gay gay
+

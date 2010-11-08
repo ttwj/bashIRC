@@ -37,12 +37,17 @@ if [ "$(type)" = "PART" ] && [ "$(dest chan)" ]; then
       mv /tmp/.bashirc/".$(dest)" /tmp/.bashirc/"$raw_input$(dest)"
    fi
 fi
+
+#Work needs to be done here :3
+if [ "$(type)" = "KICK" ] && [ "$(dest chan)" ]; then
+	bot.in "NAMES $(dest chan)"
+fi
 if [ "$(type)" = "JOIN" ] && [ "$(dest chan)" ]; then
    echo "$(nick)" >> "/tmp/.bashirc/$raw_input$(dest)"
 fi
 function user.ison() {
    #user.ison <nick> <chan>
-   bleh=$(cat "/tmp/.bashirc/$raw_input$(echo "${@}" | awk '{print $2}')" | grep "$(echo "${@}" | awk '{print $1}')")
+   bleh=$(cat "/tmp/.bashirc/$raw_input$(echo "${@}" | awk '{print $}')" | grep "$(echo "${@}" | awk '{print $1}')")
    if [ "$bleh" ]; then
       echo "$bleh"
    fi

@@ -3,16 +3,16 @@
 #Rename this file to bot.conf and run bashIRC.
 #Bot configuration
 #me - Nickname of bot
-me="sample|bot$RANDOM"
+me="sample|bot"
 #user - username of bot
 user="bot"
 
 #server - IRC server to connect to
-server="irc.ra1ndrop.net irc.example.org"
+server="irc.ra1ndrop.net irc.sample.org"
 #port - port to connect (Optional 6667 is used as default)
-#port="6667"
+port="6667"
 #channel - Channels to join on connect
-channel="#bashirc #lolchan"
+channel="#bashirc"
 
 #Identification configuration
 #Leave this out if you don't want the bot to identify to Nickserv on connect

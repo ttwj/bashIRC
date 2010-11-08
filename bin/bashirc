@@ -69,7 +69,6 @@ done
 identified="no"
 echo "NICK $me" > $slap
 echo "USER $user +iw$bot $me :$0" >> $slap
-nohup ./timer "$server"&disown
 if [ "$nohup" = "1" ]; then
    nohup ./core "$slap" "$server" "$port"&disown
    echo "Bot runned sucessfully"
