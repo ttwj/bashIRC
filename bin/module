@@ -1,6 +1,6 @@
 #!/bin/bash
 #Load all libraries
 for i in $(ls ../lib); do
-	source ../lib/$i
+   source ../lib/$i
 done
 source $1

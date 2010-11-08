@@ -14,19 +14,19 @@ if [ ! -e "/tmp/.bashirc/perm" ]; then
    mkdir /tmp/.bashirc/perm
 fi
 if [ ! -e /tmp/.bashirc/perm/ignore ]; then
-	echo "" > /tmp/.bashirc/perm/ignore
+   echo "" > /tmp/.bashirc/perm/ignore
 fi
 
 #Module system
-	if [ "$loadallmodules" = "yes" ]; then
-	for i in $(ls ../modules | grep ".module"); do
-		nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
-	done
-	else
-	for i in $loadmodule; do
-		nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
-	done
-	fi
-	#Our help command :)
-	hook=$(fantasy.hook help help.show > /dev/null)
+if [ "$loadallmodules" = "yes" ]; then
+   for i in $(ls ../modules | grep ".module"); do
+      nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
+   done
+else
+   for i in $loadmodule; do
+      nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
+   done
+fi
+#Our help command :)
+hook=$(fantasy.hook help help.show > /dev/null)
 

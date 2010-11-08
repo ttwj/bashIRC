@@ -56,8 +56,8 @@ if [ "$no" != "1" ]; then
    slap=$(echo -n "${fail[$no]}" | sed -e 's/\.//g')
    slap="$slap".input
 else
-	slap=$(echo "$server" | sed -e 's/\.//g')
-	slap="$slap.input"
+   slap=$(echo "$server" | sed -e 's/\.//g')
+   slap="$slap.input"
 fi
 for i in ${@}; do
    if [ "$i" = "-d" ]; then
