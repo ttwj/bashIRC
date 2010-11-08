@@ -1,6 +1,6 @@
 #!/bin/bash
 #Core Module for bashIRC, to identify/etc.
-
+#Removing this module = fail :(
 #IRC tracking stuff.
 #Track nick changes on $(me)
 if [ "$(type)" = "NICK" ] && [ "$(nick)" = "$(me)" ]; then

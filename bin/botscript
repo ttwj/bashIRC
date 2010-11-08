@@ -16,17 +16,19 @@ fi
 if [ ! -e /tmp/.bashirc/perm/ignore ]; then
    echo "" > /tmp/.bashirc/perm/ignore
 fi
-
+for i in $(ls ../lib); do
+	source ../lib/$i
+done
 #Module system
 if [ "$loadallmodules" = "yes" ]; then
    for i in $(ls ../modules | grep ".module"); do
-      nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
+      source ../modules/$i
    done
 else
    for i in $loadmodule; do
-      nohup bash module "../modules/$i" 2>/dev/null 1>/dev/null &
+      source ../modules/$i
    done
 fi
 #Our help command :)
-hook=$(fantasy.hook help help.show > /dev/null)
+#hook=$(fantasy.hook help help.show > /dev/null)
 

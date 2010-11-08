@@ -1,8 +1,6 @@
 #!/bin/bash
 #Core connection to IRC
 slap=$1
-start=$(date +%s)
-echo "$start" > .time
 tail -f "$slap" | telnet $2 ${3:-6667} | \
 while true
 do read LINE || break
@@ -15,9 +13,10 @@ do read LINE || break
    fi
    if [ "$bashirc_debug" = "1" ]; then
       #Thanks to Madhouse for finding this bug!
-      bash -x botscript "$slap $LINE"
+      bash -x botscript "$slap $LINE" 
+	 
    else
-      bash botscript "$slap $LINE"
+      nohup bash botscript "$slap $LINE" 2>/dev/null 1>/dev/null &
    fi
 done
 
