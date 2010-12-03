@@ -1,0 +1,69 @@
+#!/bin/bash
+#Apptrackr Module for bashIRC by Madhouse and ttwj
+#This script was made to pwn PHP bots.
+function totalapps() {
+	totalapps=$(cat totalapps)
+	echo "$totalapps"
+}
+function fetch_newtotalapps() {
+	pagenum=$(curl -s -d "request=%7B%22request%22%3A%22%7B%5C%22object%5C%22%3A%5C%22App%5C%22%2C%5C%22action%5C%22%3A%5C%22getList%5C%22%2C%5C%22args%5C%22%3A%7B%5C%22sort%5C%22%3A2%2C%5C%22appsPerPage%5C%22%3A60%2C%5C%22page%5C%22%3A1%2C%5C%22showPageCount%5C%22%3Atrue%7D%7D%22%7D" api.apptrackr.org | tr ',' 
+'\n' | grep total_pages | cut -d ':' -f2 | cut -d '}' -f1)
+
+lastpageapps=$(curl -s -d "request=%7B%22request%22%3A%22%7B%5C%22object%5C%22%3A%5C%22App%5C%22%2C%5C%22action%5C%22%3A%5C%22getList%5C%22%2C%5C%22args%5C%22%3A%7B%5C%22sort%5C%22%3A2%2C%5C%22appsPerPage%5C%22%3A60%2C%5C%22page%5C%22%3A$pagenum%7D%7D%22%7D" api.apptrackr.org | tr ',' '\n' | grep id | grep '{' | wc 
+-l)
+
+totalapps=$(( $(( $pagenum * 60 )) - 60 + $lastpageapps ))
+
+echo "$totalapps" > totalapps
+}
+function fetch_newapps() {
+	data=$(curl -d 'request={"request":"{\"object\":\"App\",\"action\":\"getList\",\"args\":{\"sort\":1,\"appsPerPage\":15,\"page\":1}}"}' http://api.apptrackr.org)
+	json=$(echo "$data" | sed -e 's/[{}]/''/g' | awk -v k="text" '{n=split($0,a,","); for (i=1; i<=n; i++) print a[i]}' | sed -e 's/\\"//g;s/\\//g' | tr ']', '\n' | tr '[', '\n'| sed -e 's/universal:\(.*\)/ /g' > newlist)
+	ids=$(cat newlist | grep "id:[3-9]")
+	for i in $ids; do
+		if [ ! "$(cat oldlist | grep "$i")" ]; then
+			lolwut=$(cat newlist | grep -A13 "$i" | sed -e 's/:/ /' > /tmp/shit)
+			while read line2; do
+				one=$(echo "$line2" | awk '{print $1}')
+				if [ "$x" = "3" ]; then
+					msg $(dest) "New application release: $name :: Ver: $version :: Link: http://apptrackr.org/?act=viewapp&id=$id"
+					x=0
+				else
+					if [ "$one" = "id" ]; then
+						id=${line2#* }
+						x=$((x+1))
+					elif [ "$one" = "name" ]; then
+						name=${line2#* }
+						x=$((x+1))
+					elif [ "$one" = "latest_version" ]; then
+						version=${line2#* }
+						x=$((x+1))
+					fi
+				fi
+			done < /tmp/shit
+		fi
+	done
+	mv newlist oldlist
+}
+function say_totalapps() {
+	msg $(dest) "Total Applications on apptrackr: $(totalapps)"
+}
+fantasy.hook "totalapps" "say_totalapps"
+
+if [ "$(type)" = "TOPIC" ]; then
+	newtopic=$(text | sed -e "s/:: apptrackr has \(.*\) apps online! ::/:: apptrackr has $(totalapps) apps online! ::/")
+	if [ "$newtopic" != "$(text)" ] && [ "$(nick)" != "$(me)" ]; then
+		echo "$newtopic" > topic
+		bot.out "TOPIC #bashirc :$newtopic"
+	fi
+fi
+if [ "$(type)" = "PONG" ]; then
+	fetch_newtotalapps
+	newtopic=$(cat topic | sed -e 's/:: apptrackr has \(.*\) apps online! ::/:: apptrackr has $(totalapps) apps online! ::/')
+	if [ "$newtopic" != "$(cat topic)" ]; then
+		bot.out "TOPIC #bashirc :$newtopic"
+	fi
+	fetch_newapps
+fi
+		
+

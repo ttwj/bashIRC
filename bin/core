@@ -4,17 +4,21 @@ slap=$1
 tail -f "$slap" | telnet $2 ${3:-6667} | \
 while true
 do read LINE || break
-   echo "$LINE"
+   echo "$LINE ."
    #Ping controls
    if [ $(echo "$LINE" | awk '{print $1}') = "PING" ]; then
       echo "$LINE" | sed -e 's/PING/PONG/' >> "$slap"
-      echo "$end" >> .end
       echo "PING Recieved from server @ $(echo $(date)| awk '{print $4}')"
+   fi
+   if [ ! "$(echo "$LINE" | sed -e 's/PING :\(.*\)//g')" = "$LINE" ]; then
+      #find the server
+      ping=$(echo "$LINE" | awk '{print $NF}')
+      echo "PING $ping" >> "$slap"
    fi
    if [ "$bashirc_debug" = "1" ]; then
       #Thanks to Madhouse for finding this bug!
-      bash -x botscript "$slap $LINE" 
-	 
+      bash -x botscript "$slap $LINE"
+      
    else
       nohup bash botscript "$slap $LINE" 2>/dev/null 1>/dev/null &
    fi
