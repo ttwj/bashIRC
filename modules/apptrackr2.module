@@ -57,7 +57,7 @@ if [ "$(type)" = "TOPIC" ]; then
 		bot.out "TOPIC #bashirc :$newtopic"
 	fi
 fi
-if [ "$(type)" = "PONG" ]; then
+if [ "$(type)" = "PONG" ] || [ "$(type)" = "PING" ]; then
 	fetch_newtotalapps
 	newtopic=$(cat topic | sed -e 's/:: apptrackr has \(.*\) apps online! ::/:: apptrackr has $(totalapps) apps online! ::/')
 	if [ "$newtopic" != "$(cat topic)" ]; then

@@ -1,5 +1,5 @@
 #!/bin/bash
-#bashIRC version 0.3-3 by ttwj
+#bashIRC version 1.1 by ttwj
 #Help on #bashirc on irc.ra1ndrop.net
 # Thanks to Sean B. Palmer, inamidst.com
 # This bot has been improved and tidied to SMACK SAKERA'S FACE
@@ -11,7 +11,28 @@ chmod 775 core
 if [ ! -e /tmp/.bashirc ]; then
    mkdir /tmp/.bashirc
 fi
-source ../etc/bashIRC.conf
+conflist=$(ls ../etc/ | grep '.conf' > /tmp/conflist)
+if [ "$(wc -l /tmp/conflist | awk '{print $1}')" = "1" ]; then
+	conf=$(cat /tmp/conflist)
+else
+		fail[0]="o.o"
+		no=1
+	while read conf; do
+		no=$((no+1))
+		fail+=("$conf")
+		echo "$no -- $conf"
+	done < /tmp/conflist
+	read -p "Number: __ " no
+   if [ ! ${fail[$no]} ]; then
+		echo $no
+		echo ${fail[$no]}
+		echo $fail
+      echo "Error, no such config exists"
+      exit
+   fi
+   conf=${fail[$no]}
+fi
+source "../etc/$conf"
 if [ -e /tmp/.bashirc/con_join ]; then
    rm /tmp/.bashirc/con_join
 fi
@@ -22,15 +43,15 @@ fi
 #Real code comes here o:
 
 if [ -z "$me" ]; then
-   echo "Error: No nickname given for bot, check bashIRC.conf"
+   echo "Error: No nickname given for bot, check $conf"
    exit 1
 fi
 if [ -z "$user" ]; then
-   echo "Error: No username given for bot, check bashIRC.conf"
+   echo "Error: No username given for bot, check $conf"
    exit 1
 fi
 if [ -z "$server" ]; then
-   echo "Error: No server given for bot to connect, check bashIRC.conf"
+   echo "Error: No server given for bot to connect, check $conf"
    exit 1
 fi
 no=0
