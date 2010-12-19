@@ -1,7 +1,8 @@
 #!/bin/bash
 ver="$(cat ~/bashIRC/VERSION)"
 export ver
-source ../etc/bashIRC.conf
+derp=$(echo "${@}" | awk '{print $NF}')
+source "../etc/$derp"
 input=${@}
 input=${input#* }
 raw_input=$(echo "${@}" | awk '{print $1}')

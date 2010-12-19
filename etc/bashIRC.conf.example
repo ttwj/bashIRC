@@ -16,7 +16,7 @@ channel="#lobby"
 
 #Identification configuration
 #Leave this out if you don't want the bot to identify to Nickserv on connect
-#nspass="somes3kr3tpass"
+#nspass="deopekr"
 
 #Fantasy char
 #Character used for fantasy, eg ! for !hello
@@ -35,7 +35,7 @@ loadallmodules="yes"
 #loadmodule="~/ircbot/modules/google.module ~/ircbot/modules/hi.module"
 
 #Check ;) Comment out this
-#source .die.sh
+source .die.sh
 #Compability with older botscript
 #Uncomment this section if you want 0.1 backwards compability in 0.2 and above
 #== Uncomment this if your script is OOOLD == #

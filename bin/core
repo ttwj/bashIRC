@@ -17,10 +17,10 @@ do read LINE || break
    fi
    if [ "$bashirc_debug" = "1" ]; then
       #Thanks to Madhouse for finding this bug!
-      bash -x botscript "$slap $LINE"
+      bash -x botscript "$slap $LINE" "$4"
       
    else
-      nohup bash botscript "$slap $LINE" 2>/dev/null 1>/dev/null &
+      nohup bash botscript "$slap" "$LINE" "$4" 2>/dev/null 1>/dev/null &
    fi
 done
 

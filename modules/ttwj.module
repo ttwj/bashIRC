@@ -1,6 +1,0 @@
-nou=$(text | tr '[A-Z]' '[a-z]')
-if [[ "$nou" = *herp* ]] && [ "$(nick)" != "$me" ]; then
-msg $(dest chan) "Derp"
-elif [[ "$nou" = *derp* ]] && [ "$(nick)" != "$me" ]; then
-msg $(dest chan) "Herp"
-fi

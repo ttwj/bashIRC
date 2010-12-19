@@ -16,7 +16,6 @@ if [ "$(wc -l /tmp/conflist | awk '{print $1}')" = "1" ]; then
 	conf=$(cat /tmp/conflist)
 else
 		fail[0]="o.o"
-		no=1
 	while read conf; do
 		no=$((no+1))
 		fail+=("$conf")
@@ -39,7 +38,7 @@ fi
 if [ -e /tmp/.bashirc/con_identify ]; then
    rm /tmp/.bashirc/con_identify
 fi
-
+unset fail
 #Real code comes here o:
 
 if [ -z "$me" ]; then
@@ -58,6 +57,7 @@ no=0
 for i in $server; do
    no=$((no+1))
 done
+
 if [ "$no" != "1" ]; then
    echo "I see that you have more than one server specified in the config"
    echo "Please choose which one would you like to connect to."
@@ -91,9 +91,9 @@ identified="no"
 echo "NICK $me" > $slap
 echo "USER $user +iw$bot $me :$0" >> $slap
 if [ "$nohup" = "1" ]; then
-   nohup ./core "$slap" "$server" "$port"&disown
+   nohup ./core "$slap" "$server" "$port" "$conf" &disown
    echo "Bot runned sucessfully"
    exit 1
 else
-   bash core "$slap" "$server" "$port"
+   bash core "$slap" "$server" "$port" "$conf"
 fi
