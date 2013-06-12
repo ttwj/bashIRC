@@ -1,6 +1,7 @@
 #!/bin/bash
 #bashIRC version 1.1 by ttwj
 #Help on #bashirc on irc.ra1ndrop.net
+set -x #debugging: remember to remove
 # Thanks to Sean B. Palmer, inamidst.com
 # This bot has been improved and tidied to SMACK SAKERA'S FACE
 cat motd
@@ -32,6 +33,19 @@ else
    conf=${fail[$no]}
 fi
 source "../etc/$conf"
+# setting chanprefix
+chanprefix_o="@"
+chanprefix_h="%"
+chanprefix_v="+"
+if [[ $chanprefix == "1" ]]; then
+	chanprefix_q="~"
+	chanprefix_a="&"
+	chanprefix_order="qaohv"
+elif [[ $chanprefix == "2" ]]; then
+	chanprefix_q=""
+	chanprefix_a="!"
+	chanprefix_order="aohv"
+fi
 if [ -e /tmp/.bashirc/con_join ]; then
    rm /tmp/.bashirc/con_join
 fi

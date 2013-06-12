@@ -1,97 +1,0 @@
-Trying 72.8.140.156... .
-Connected to irc.ra1ndrop.net. .
-Escape character is '^]'. .
-:chat.us.kawaiichan.net NOTICE Auth :*** Looking up your hostname... .
-:chat.us.kawaiichan.net NOTICE Auth :*** Found your hostname (cm231.delta58.maxonline.com.sg) -- cached .
-:chat.us.kawaiichan.net NOTICE Auth :Welcome to Walbi! .
-:chat.us.kawaiichan.net 001 Lucario :Welcome to the Walbi IRC Network Lucario!bot@cm231.delta58.maxonline.com.sg .
-:chat.us.kawaiichan.net 002 Lucario :Your host is chat.us.kawaiichan.net, running version InspIRCd-2.0 .
-:chat.us.kawaiichan.net 003 Lucario :This server was created 02:06:45 Dec 17 2010 .
-:chat.us.kawaiichan.net 004 Lucario chat.us.kawaiichan.net InspIRCd-2.0 BHIRgiorswx ACLMQRTabcefhijklmnopqrstvwz Labefhjkloqvw .
-:chat.us.kawaiichan.net 005 Lucario AWAYLEN=200 CALLERID=g CASEMAPPING=rfc1459 CHANMODES=bew,k,Lfjl,ACMQRTcimnprstz CHANTYPES=# CHARSET=ascii ELIST=MU EXCEPTS=e EXTBAN=,ACQRTcmpz FNC KICKLEN=255 MAP MAXBANS=60 :are supported by this server .
-:chat.us.kawaiichan.net 005 Lucario MAXCHANNELS=20 MAXPARA=32 MAXTARGETS=19 MODES=19 NETWORK=Walbi NICKLEN=31 PREFIX=(qaohv)~&@%+ SSL=72.8.140.156:6697 STATUSMSG=~&@%+ TOPICLEN=307 VBANLIST WALLCHOPS WALLVOICES :are supported by this server .
-:chat.us.kawaiichan.net 042 Lucario 79WAAAFT7 :your unique ID .
-:chat.us.kawaiichan.net 375 Lucario :chat.us.kawaiichan.net message of the day .
-:chat.us.kawaiichan.net 372 Lucario :-  .
-:chat.us.kawaiichan.net 372 Lucario :-        ___           ___           ___           ___                  .
-:chat.us.kawaiichan.net 372 Lucario :-       /__/|         /  /         /__/         /  /        ___      .
-:chat.us.kawaiichan.net 372 Lucario :-      |  |:|        /  /::       __ :       /  /::      /  /     .
-:chat.us.kawaiichan.net 372 Lucario :-      |  |:|       /  /:/:     /__/ :     /  /:/:    /  /:/     .
-:chat.us.kawaiichan.net 372 Lucario :-    __|  |:|      /  /:/~/::   __ : :   /  /:/~/::  /__/::     .
-:chat.us.kawaiichan.net 372 Lucario :-   /__/_|:|____ /__/:/ /:/: /__/ : : /__/:/ /:/: __/:__  .
-:chat.us.kawaiichan.net 372 Lucario :-     :/:::::/   :/:/__/   : :/:/   :/:/__/      :/ .
-:chat.us.kawaiichan.net 372 Lucario :-      ::/~~~~     ::/         : ::/     ::/          __::/ .
-:chat.us.kawaiichan.net 372 Lucario :-       :          :          :/:/       :          /__/:/  .
-:chat.us.kawaiichan.net 372 Lucario :-        :          :          ::/         :         __/   .
-:chat.us.kawaiichan.net 372 Lucario :-       __/         __/         __/         __/                 .
-:chat.us.kawaiichan.net 372 Lucario :-                    ___           ___           ___           ___      .
-:chat.us.kawaiichan.net 372 Lucario :-      ___          /  /         /__/         /  /         /__/     .
-:chat.us.kawaiichan.net 372 Lucario :-     /  /        /  /:/           :       /  /::          :    .
-:chat.us.kawaiichan.net 372 Lucario :-    /  /:/       /  /:/           __:     /  /:/:          :   .
-:chat.us.kawaiichan.net 372 Lucario :-   /__/::      /  /:/  ___   ___ /  /::   /  /:/~/::   _______:  .
-:chat.us.kawaiichan.net 372 Lucario :-   __/:__  /__/:/  /  / /__/  /:/: /__/:/ /:/: /__/:::::::: .
-:chat.us.kawaiichan.net 372 Lucario :-        :/   : /  /:/   :/:/__/   :/:/__/   :~~~~/ .
-:chat.us.kawaiichan.net 372 Lucario :-       __::/    :  /:/     ::/         ::/         :  ~~~  .
-:chat.us.kawaiichan.net 372 Lucario :-       /__/:/      :/:/       :          :          :      .
-:chat.us.kawaiichan.net 372 Lucario :-       __/        ::/         :          :          :     .
-:chat.us.kawaiichan.net 372 Lucario :-                   __/         __/         __/         __/ .
-:chat.us.kawaiichan.net 376 Lucario :End of message of the day. .
-:chat.us.kawaiichan.net 251 Lucario :There are 30 users and 84 invisible on 10 servers .
-:chat.us.kawaiichan.net 252 Lucario 32 :operator(s) online .
-:chat.us.kawaiichan.net 254 Lucario 82 :channels formed .
-:chat.us.kawaiichan.net 255 Lucario :I have 16 clients and 1 servers .
-:chat.us.kawaiichan.net 265 Lucario :Current Local Users: 16  Max: 18 .
-:chat.us.kawaiichan.net 266 Lucario :Current Global Users: 114  Max: 115 .
-:chat.us.kawaiichan.net 396 Lucario herpeu8bu2.maxonline.com.sg :is now your displayed host .
-:Lucario!bot@herpeu8bu2.maxonline.com.sg MODE Lucario +x .
-:NickServ!NickServ@services.int NOTICE Lucario :This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>. .
-:NickServ!NickServ@services.int NOTICE Lucario :You are now identified for ttwj. .
-:chat.us.kawaiichan.net 900 Lucario Lucario!bot@herpeu8bu2.maxonline.com.sg ttwj :You are now logged in as ttwj .
-:MemoServ!MemoServ@services.int NOTICE Lucario :You have 4 new memos. .
-:MemoServ!MemoServ@services.int NOTICE Lucario :To read them, type /msg MemoServ READ NEW .
-:chat.us.kawaiichan.net 396 Lucario my.poop.is.your.shit :is now your displayed host .
-:chat.us.kawaiichan.net 474 Lucario #lobby :Cannot join channel (You are banned) .
-:chat.us.kawaiichan.net 470 Lucario #lobby #chat :You are banned from this channel, so you are automatically transfered to the redirected channel. .
-:Lucario!bot@my.poop.is.your.shit JOIN :#Chat .
-:chat.us.kawaiichan.net 332 Lucario #Chat :0,1Welcome to #Chat , The Official General Chat channel of the Walbi IRC Network | Plants disapproved .
-:chat.us.kawaiichan.net 333 Lucario #Chat dida55 1292697642 .
-:chat.us.kawaiichan.net 353 Lucario = #Chat :CauseFX Found Pdantix @Chat Diytto ~ttwj @P1xellat3d Cykey_ ~Unstar &Kaikz Strange_panda WYSE %nem Fujiyama Tony Johan %lilstevie|zzz lolz &Plusle Katsuo Unknown O_o +PWNiT peer[Off] Hurpdog Dark_Link Hexane dsi246 +Shiny Lucario @[] Fire &mbilker Robz .
-:chat.us.kawaiichan.net 366 Lucario #Chat :End of /NAMES list. .
-:ChanServ!ChanServ@services.int NOTICE Lucario :[#chat] NOTE: #lobby HAS BEEN MOVED TO #CHAT! 0,1Please treat users on this channel as you would want others to treat you, and that you adhere to all Network rules. Abusive actions in this channel may result in your removal from the channel, server, or network. Thank you. 3,4 Also, HAPPY HOLIDAYS! .
-:Chat!Chat@Chat MODE #Chat +qo Lucario Lucario .
-:ttwj!ttwj@my.poop.is.your.shit PRIVMSG #Chat :@help .
-:ttwj!ttwj@my.poop.is.your.shit PRIVMSG #Chat :o.o .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :ACTION bops ttwj .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :no u .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat ::| .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :pokemon are not for raPING .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :they are for cuddling .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :>:| .
-:ttwj!ttwj@my.poop.is.your.shit PRIVMSG #Chat :@sj .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :... .
-:ttwj!ttwj@my.poop.is.your.shit PRIVMSG #Chat :@sj .
-:ttwj!ttwj@my.poop.is.your.shit PRIVMSG #Chat :@sj .
-:Kaikz!Kaikz@network.admin PRIVMSG #Chat :!steve .
-:lolz!lolz@herp2a9.i6n.17.85.IP PRIVMSG #Chat :STEVE JOBS DOESN'T EVEN OWN A TV .
-:Kaikz!Kaikz@network.admin PRIVMSG #Chat :Mine works. .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :!fml .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :@fml .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :.fml .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :FML .
-:P1xellat3d!P1xellat3d@herp.till.you.derp PRIVMSG #Chat :!steve .
-:ttwj!ttwj@my.poop.is.your.shit PRIVMSG #Chat :I'll go make one fml .
-:lolz!lolz@herp2a9.i6n.17.85.IP PRIVMSG #Chat :STEVE JOBS WANTS TO KNOW WHEN YOU LOST YOUR VIRGINITY .
-:P1xellat3d!P1xellat3d@herp.till.you.derp PRIVMSG #Chat :creepy, bro. .
-:Dark_Link!Dark_Link@herpkd45so.az.comcast.net PRIVMSG #Chat :Haha .
-PING :chat.us.kawaiichan.net .
-PING Recieved from server @ 09:20:36
-:chat.us.kawaiichan.net PONG chat.us.kawaiichan.net :chat.us.kawaiichan.net .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :omg .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :this beefjerky is freaken awesome .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :I whole face hurts from chewing it .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :its so good though I cant stop .
-:Plusle!nou@i.liek.kittens PRIVMSG #Chat :>_< .
-PING :chat.us.kawaiichan.net .
-PING Recieved from server @ 09:22:38
-:chat.us.kawaiichan.net PONG chat.us.kawaiichan.net :chat.us.kawaiichan.net .
-Connection closed by foreign host.

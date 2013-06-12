@@ -27,7 +27,7 @@ if [ "$loadallmodules" = "yes" ]; then
    done
 else
    for i in $loadmodule; do
-      source ../modules/$i
+      source ../modules/$i.module
    done
 fi
 #Our help command :)

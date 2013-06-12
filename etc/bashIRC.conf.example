@@ -1,13 +1,16 @@
 #!/bin/bash
-#bashIRC configuration file
-#Rename this file to bot.conf and run bashIRC.
-#Bot configuration
-#me - Nickname of bot
+# bashIRC configuration file
+# Rename this file to bot.conf and run bashIRC.
+#
+######################
+# Bot configuration #
+#####################
+# me - Nickname of bot
 me="sample|bot"
-#user - username of bot
+# user - username of bot
 user="bot"
 
-#server - IRC server to connect to
+# server - IRC server to connect to
 server="irc.ra1ndrop.net irc.sample.org"
 #port - port to connect (Optional 6667 is used as default)
 port="6667"
@@ -32,7 +35,7 @@ botmode="B"
 loadallmodules="yes"
 
 #If no, specify what modules should be loaded
-#loadmodule="~/ircbot/modules/google.module ~/ircbot/modules/hi.module"
+loadmodule="google hi"
 
 #Check ;) Comment out this
 source .die.sh
@@ -43,25 +46,12 @@ source .die.sh
 #nick_=$(nick)
 #dest=$(dest)
 
+# Chanprefixes
+# Prefix for channel op modes, e.g. +a
+# Use "1" if you're using ircds such as Unrealircd, InspIRCD, plexus etc. Refer to the network's ircops for more info. (~ & @ % +)
+# Use "2" if you're using shadowircd. (! @ % +)
+chanprefix="1"
 
-# [ OPTIONAL ] (to only be used in 0.4)
-#Chanprefixes
-# Modes like +a should be with which prefix
-#	Use this prefix settings if you're using ircds such as Unrealircd, InspIRCD, plexus etc. Refer to the network's ircops for more info.
-#chanprefix_q="~"
-#chanprefix_a="&"
-#chanprefix_o="@"
-#chanprefix_h="%"
-#chanprefix_v="+"
-#chanprefix_order="qaohv"
-
-#	Use this prefix settings if you're using shadowircd.
-#chanprefix_q=""
-#chanprefix_a="!"
-#chanprefix_o="@"
-#chanprefix_h="%"
-#chanprefix_v="+"
-#chanprefix_order="aohv"
-
-#Configuration for other modules may also be placed here.
-
+#################
+# Module config #
+#################
