@@ -1,7 +1,6 @@
 #!/bin/bash
 #bashIRC version 1.1 by ttwj
 #Help on #bashirc on irc.ra1ndrop.net
-set -x #debugging: remember to remove
 # Thanks to Sean B. Palmer, inamidst.com
 # This bot has been improved and tidied to SMACK SAKERA'S FACE
 cat motd
