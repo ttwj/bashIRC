@@ -42,7 +42,7 @@ if [ "$(type)" = "PRIVMSG" ] && [ "$(dest chan)" ]; then
       fi
    fi
    if [ "$cmd" = "@sj" ]; then
-      echo "$(eval bash ~/bashIRC/modules/rand ~/bashIRC/modules/stevejobs)" > /tmp/stuff
+      echo "$(eval bash ~/bashIRC/modules/support/rand ~/bashIRC/modules/support/stevejobs)" > /tmp/stuff
       while read lol; do
          msg $(dest chan) "$lol"
       done < /tmp/stuff

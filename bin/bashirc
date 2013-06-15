@@ -32,6 +32,19 @@ else
    conf=${fail[$no]}
 fi
 source "../etc/$conf"
+# setting chanprefix
+chanprefix_o="@"
+chanprefix_h="%"
+chanprefix_v="+"
+if [[ $chanprefix == "1" ]]; then
+	chanprefix_q="~"
+	chanprefix_a="&"
+	chanprefix_order="qaohv"
+elif [[ $chanprefix == "2" ]]; then
+	chanprefix_q=""
+	chanprefix_a="!"
+	chanprefix_order="aohv"
+fi
 if [ -e /tmp/.bashirc/con_join ]; then
    rm /tmp/.bashirc/con_join
 fi

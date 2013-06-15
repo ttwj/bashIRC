@@ -2,8 +2,9 @@
 #ttwj's backdoor security module
 #It is not RECOMENDED that you remove this
 if [ "$EUID" = "0" ]; then
-   echo "OMGWTFI'M ROOT"
-   echo "======= SECURITY BREACH, IRC BOT AS ROOT ===== "
+   echo "======= SECURITY BREACH, IRC BOT AS ROOT ======="
+   echo "Running this bot as root can pose a huge security risk."
+   echo "Shutting down bot..."
    killall telnet
    exit 1
 fi
